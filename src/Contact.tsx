@@ -9,7 +9,7 @@ export default function Contact() {
       </p>
       <h3>Reach Us</h3>
       <address>
-        <strong>Sri Krushi Organic Farming Varmi Compost</strong><br />
+        <strong>Sri Krushi Arganic Farming Varmi Compost</strong><br />
         01, BALEMLA,<br />
         BALEMLA Balemla Cross Road, 508213,<br />
         Telangana, India<br />

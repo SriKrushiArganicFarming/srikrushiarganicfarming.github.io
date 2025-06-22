@@ -39,9 +39,9 @@ function Home() {
   return (
     <>
       <img src={logo} alt="Sri Krushi Organic Farming Logo" className="logo" />
-      <h1>Sri Krushi Organic Farming Varmi Compost</h1>
+      <h1>Sri Krushi Arganic Farming Varmi Compost</h1>
       <p>
-        Sri Krushi Organic Farming Varmi Compost is dedicated to sustainable agriculture and organic farming practices since 2005. We provide high-quality organic products and promote eco-friendly farming methods.
+        Sri Krushi Arganic Farming Varmi Compost is dedicated to sustainable agriculture and organic farming practices since 2005. We provide high-quality organic products and promote eco-friendly farming methods.
       </p>
       <section>
         <h2>Our Products</h2>
