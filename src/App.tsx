@@ -1,27 +1,31 @@
 import React from 'react';
 import './App.css';
 import logo from './assets/logo.png';
+import vermicompostImg from './assets/vermicompost-manure-500x500.webp';
+import neemPowderImg from './assets/neem-leaves-powder-500x500.webp';
+import mangoImg from './assets/organic-mangos-500x500.webp';
+import milletsImg from './assets/andu-korralu-brown-top--500x500.webp';
 
 const products = [
   {
     name: 'Natural Vermicompost',
     description: 'Offering you a complete choice of products which include Vermicompost Organic Manure, Organic Vermicompost, Fertilizer Vermicompost, Vermicompost Powder and Worm Vermicompost.',
-    image: '/src/assets/vermicompost-manure-500x500.webp',
+    image: vermicompostImg,
   },
   {
     name: 'Neem Powder',
     description: 'We are a leading Manufacturer of Neem Leaves Powder, Organic Neem Powder, Natural Neem Powder, Neem Cake Powder, Neem Powder Fertilizer and Herbal Neem Powder from Nalgonda, India.',
-    image: '/src/assets/neem-leaves-powder-500x500.webp',
+    image: neemPowderImg,
   },
   {
     name: 'Organic Mangoes',
     description: 'We are a leading Manufacturer of Organic Mango from Nalgonda, India.',
-    image: '/src/assets/organic-mangos-500x500.webp', // Add this image to your assets
+    image: mangoImg,
   },
   {
     name: 'Millets',
     description: 'Manufacturer of a wide range of products which include Andu Korralu (Brown Top).',
-    image: '/src/assets/andu-korralu-brown-top--500x500.webp', // Add this image to your assets
+    image: milletsImg,
   },
 ];
 
