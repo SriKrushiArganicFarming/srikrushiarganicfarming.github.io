@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import logo from './assets/logo.png';
 import vermicompostImg from './assets/vermicompost-manure-500x500.webp';
@@ -6,7 +5,7 @@ import neemPowderImg from './assets/neem-leaves-powder-500x500.webp';
 import mangoImg from './assets/organic-mangos-500x500.webp';
 import milletsImg from './assets/andu-korralu-brown-top--500x500.webp';
 
-const products = [
+const PRODUCTS = [
   {
     name: 'Natural Vermicompost',
     description: 'Offering you a complete choice of products which include Vermicompost Organic Manure, Organic Vermicompost, Fertilizer Vermicompost, Vermicompost Powder and Worm Vermicompost.',
@@ -34,11 +33,13 @@ function App() {
     <div className="container">
       <img src={logo} alt="Sri Krushi Organic Farming Logo" className="logo" />
       <h1>Sri Krushi Organic Farming VermiCompost</h1>
-      <p>Welcome to our website!</p>
+      <p>
+        Since establishment in the year 2005, we are focusing on becoming one of the most familiar and trustworthy name of this industry and for this, we make sure to perform our manufacturing activities in an efficient and ethical manner. The range of products in which we deal is Neem Powder and Natural Vermicompost. Our corporation is specializes in the quick and efficient shipment of ordered consignments by the means of logistic facility.
+      </p>
       <section>
         <h2>Our Products</h2>
         <div className="products">
-          {products.map((product) => (
+          {PRODUCTS.map((product) => (
             <div className="product-card" key={product.name}>
               <img src={product.image} alt={product.name} className="product-image" />
               <div>
