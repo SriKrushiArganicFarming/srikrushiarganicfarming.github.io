@@ -1,7 +1,7 @@
 {
-  "name": "srikrushiorganicfarmingvermicompost",
+  "name": "srikrushiorganicfarmingvarmicompost",
   "version": "1.0.0",
-  "description": "Welcome to the official website repository for Sri Krushi Organic Farming VermiCompost.",
+  "description": "Welcome to the official website repository for Sri Krushi Organic Farming Varmi Compost.",
   "main": "index.js",
   "scripts": {
     "dev": "vite",

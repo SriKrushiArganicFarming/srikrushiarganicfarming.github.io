@@ -39,9 +39,9 @@ function Home() {
   return (
     <>
       <img src={logo} alt="Sri Krushi Organic Farming Logo" className="logo" />
-      <h1>Sri Krushi Organic Farming VermiCompost</h1>
+      <h1>Sri Krushi Organic Farming Varmi Compost</h1>
       <p>
-        Since establishment in the year 2005, we are focusing on becoming one of the most familiar and trustworthy name of this industry and for this, we make sure to perform our manufacturing activities in an efficient and ethical manner. The range of products in which we deal is Neem Powder and Natural Vermicompost. Our corporation is specializes in the quick and efficient shipment of ordered consignments by the means of logistic facility.
+        Sri Krushi Organic Farming Varmi Compost is dedicated to sustainable agriculture and organic farming practices since 2005. We provide high-quality organic products and promote eco-friendly farming methods.
       </p>
       <section>
         <h2>Our Products</h2>

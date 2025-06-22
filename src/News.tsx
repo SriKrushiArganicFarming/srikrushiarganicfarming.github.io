@@ -5,7 +5,7 @@ export default function News() {
     <div>
       <h2>News</h2>
       <p>
-        Latest news and announcements from Sri Krushi Organic Farming VermiCompost.
+        Latest news and announcements from Sri Krushi Organic Farming Varmi Compost.
       </p>
     </div>
   );
