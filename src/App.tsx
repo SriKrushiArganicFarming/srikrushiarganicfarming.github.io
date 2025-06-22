@@ -5,6 +5,13 @@ import neemPowderImg from './assets/neem-leaves-powder-500x500.webp';
 import mangoImg from './assets/organic-mangos-500x500.webp';
 import milletsImg from './assets/andu-korralu-brown-top--500x500.webp';
 
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import About from './About';
+import Blog from './Blog';
+import News from './News';
+import Contact from './Contact';
+
+
 const PRODUCTS = [
   {
     name: 'Natural Vermicompost',
@@ -28,9 +35,9 @@ const PRODUCTS = [
   },
 ];
 
-function App() {
+function Home() {
   return (
-    <div className="container">
+    <>
       <img src={logo} alt="Sri Krushi Organic Farming Logo" className="logo" />
       <h1>Sri Krushi Organic Farming VermiCompost</h1>
       <p>
@@ -50,7 +57,33 @@ function App() {
           ))}
         </div>
       </section>
-    </div>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <div className="container">
+        <nav className="nav">
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/blog">Blog</Link>
+          <Link to="/news">News</Link>
+          <Link to="/contact">Contact</Link>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <footer className="footer">
+          &copy; {new Date().getFullYear()} SRI KRUSHI ARGANIC FARMING VARMI COMPOST
+        </footer>
+      </div>
+    </Router>
   );
 }
 
