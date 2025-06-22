@@ -40,7 +40,8 @@ const PRODUCTS = [
   },
 ];
 
-function Home() {
+// Products page component
+function Products() {
   return (
     <>
       <img src={logo} alt="Sri Krushi Organic Farming Logo" className="logo" />
@@ -76,14 +77,15 @@ function App() {
     <Router>
       <div className="container">
         <nav className="nav">
-          <Link to="/">Home</Link>
+          <Link to="/products">Products</Link>
           <Link to="/about">About</Link>
           <Link to="/blog">Blog</Link>
           <Link to="/news">News</Link>
           <Link to="/contact">Contact</Link>
         </nav>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Products />} />
+          <Route path="/products" element={<Products />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/news" element={<News />} />
