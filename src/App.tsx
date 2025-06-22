@@ -10,25 +10,30 @@ import About from './About';
 import Blog from './Blog';
 import News from './News';
 import Contact from './Contact';
+import ProductDetails from './ProductDetails';
 
 
 const PRODUCTS = [
   {
+    slug: 'vermicompost',
     name: 'Natural Vermicompost',
     description: 'Offering you a complete choice of products which include Vermicompost Organic Manure, Organic Vermicompost, Fertilizer Vermicompost, Vermicompost Powder and Worm Vermicompost.',
     image: vermicompostImg,
   },
   {
+    slug: 'neem-powder',
     name: 'Neem Powder',
     description: 'We are a leading Manufacturer of Neem Leaves Powder, Organic Neem Powder, Natural Neem Powder, Neem Cake Powder, Neem Powder Fertilizer and Herbal Neem Powder from Nalgonda, India.',
     image: neemPowderImg,
   },
   {
+    slug: 'mangoes',
     name: 'Organic Mangoes',
     description: 'We are a leading Manufacturer of Organic Mango from Nalgonda, India.',
     image: mangoImg,
   },
   {
+    slug: 'millets',
     name: 'Millets',
     description: 'Manufacturer of a wide range of products which include Andu Korralu (Brown Top).',
     image: milletsImg,
@@ -47,13 +52,18 @@ function Home() {
         <h2>Our Products</h2>
         <div className="products">
           {PRODUCTS.map((product) => (
-            <div className="product-card" key={product.name}>
+            <Link
+              to={`/product/${product.slug}`}
+              className="product-card"
+              key={product.name}
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            >
               <img src={product.image} alt={product.name} className="product-image" />
               <div>
                 <h3>{product.name}</h3>
                 <p>{product.description}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -78,6 +88,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/product/:slug" element={<ProductDetails />} />
         </Routes>
         <footer className="footer">
           &copy; {new Date().getFullYear()} SRI KRUSHI ARGANIC FARMING VARMI COMPOST
