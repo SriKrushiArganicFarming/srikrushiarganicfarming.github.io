@@ -8,5 +8,4 @@ We promote sustainable organic farming techniques and Varmi Composting to help c
 
 - Information on organic farming and Varmi Composting
 - Resources and guides for sustainable agriculture
-- Links to purchase our products on [IndiaMART](https://www.indiamart.com/srikrushiarganicfarmingvarmicompost/profile.html?srsltid=AfmBOooU1NlioEvMd9pRGFMf5Cvhknit32jatY1snpAgfzScI4vW8dFd)
 - Community initiatives and educational materials
