@@ -1,5 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
+
+// Import the CartContext to use the cart functionality
+import { useCart } from './CartContext';
+
+// Import images for main products
 import vermicompostImg from './assets/vermicompost-manure-500x500.webp';
 import neemPowderImg from './assets/neem-leaves-powder-500x500.webp';
 import mangoImg from './assets/organic-mangos-500x500.webp';
@@ -436,7 +441,14 @@ function ImageGallery({ images }: { images: string[] }) {
  */
 function ProductDetails() {
   const { slug } = useParams<{ slug: string }>();
+  const { cart, addToCart, removeFromCart } = useCart();
   const product = PRODUCTS.find(p => p.slug === slug);
+
+  // Helper to get quantity in cart for a sub-product
+  function getQuantity(subName: string) {
+    const item = cart.find(i => i.name === subName);
+    return item ? item.quantity : 0;
+  }
 
   if (!product) {
     return (
@@ -446,7 +458,6 @@ function ProductDetails() {
       </div>
     );
   }
-
 
   return (
     <div>
@@ -462,43 +473,80 @@ function ProductDetails() {
         <section style={{ marginTop: '2rem' }}>
           <h3 style={{ textAlign: 'center' }}>Products in this Category</h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
-            {product.subProducts.map((sub, idx) => (
-              <div
-                key={idx}
-                style={{
-                  background: '#f8f8f8',
-                  borderRadius: 8,
-                  padding: '1rem',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '1rem'
-                }}
-              >
-                <ImageGallery images={sub.images} />
-                <div>
-                  <h4 style={{ margin: 0 }}>{sub.name}</h4>
-                  <ul style={{ margin: '0.5rem 0' }}>
-                    {sub.price && <li><strong>Price:</strong> {sub.price}</li>}
-                    {sub.minOrder && <li><strong>Minimum Order Quantity:</strong> {sub.minOrder}</li>}
-                    {sub.packSize && <li><strong>Pack Size:</strong> {sub.packSize}</li>}
-                    {sub.packType && <li><strong>Pack Type:</strong> {sub.packType}</li>}
-                    {sub.form && <li><strong>Form:</strong> {sub.form}</li>}
-                    {sub.grade && <li><strong>Grade Standard:</strong> {sub.grade}</li>}
-                    {sub.isOrganic && <li><strong>Is It Organic:</strong> {sub.isOrganic}</li>}
-                    {sub.type && <li><strong>Type:</strong> {sub.type}</li>}
-                    {sub.processingType && <li><strong>Processing Type:</strong> {sub.processingType}</li>}
-                    {sub.packagingSizes && <li><strong>Packaging Sizes:</strong> {sub.packagingSizes}</li>}
-                    {sub.usage && <li><strong>Usage/Application:</strong> {sub.usage}</li>}
-                    {sub.brand && <li><strong>Brand:</strong> {sub.brand}</li>}
-                    {sub.color && <li><strong>Color:</strong> {sub.color}</li>}
-                    {sub.cultivationType && <li><strong>Cultivation Type:</strong> {sub.cultivationType}</li>}
-                    {sub.variety && <li><strong>Variety:</strong> {sub.variety}</li>}
-                    {sub.quality && <li><strong>Quality Available:</strong> {sub.quality}</li>}
-                  </ul>
-                  {sub.description && <div style={{ marginTop: 8 }}>{sub.description}</div>}
+            {product.subProducts.map((sub, idx) => {
+              const quantity = getQuantity(sub.name);
+              return (
+                <div
+                  key={idx}
+                  style={{
+                    background: '#f8f8f8',
+                    borderRadius: 8,
+                    padding: '1rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '1rem'
+                  }}
+                >
+                  <ImageGallery images={sub.images} />
+                  <div>
+                    <h4 style={{ margin: 0 }}>{sub.name}</h4>
+                    <ul style={{ margin: '0.5rem 0' }}>
+                      {sub.price && <li><strong>Price:</strong> {sub.price}</li>}
+                      {sub.minOrder && <li><strong>Minimum Order Quantity:</strong> {sub.minOrder}</li>}
+                      {sub.packSize && <li><strong>Pack Size:</strong> {sub.packSize}</li>}
+                      {sub.packType && <li><strong>Pack Type:</strong> {sub.packType}</li>}
+                      {sub.form && <li><strong>Form:</strong> {sub.form}</li>}
+                      {sub.grade && <li><strong>Grade Standard:</strong> {sub.grade}</li>}
+                      {sub.isOrganic && <li><strong>Is It Organic:</strong> {sub.isOrganic}</li>}
+                      {sub.type && <li><strong>Type:</strong> {sub.type}</li>}
+                      {sub.processingType && <li><strong>Processing Type:</strong> {sub.processingType}</li>}
+                      {sub.packagingSizes && <li><strong>Packaging Sizes:</strong> {sub.packagingSizes}</li>}
+                      {sub.usage && <li><strong>Usage/Application:</strong> {sub.usage}</li>}
+                      {sub.brand && <li><strong>Brand:</strong> {sub.brand}</li>}
+                      {sub.color && <li><strong>Color:</strong> {sub.color}</li>}
+                      {sub.cultivationType && <li><strong>Cultivation Type:</strong> {sub.cultivationType}</li>}
+                      {sub.variety && <li><strong>Variety:</strong> {sub.variety}</li>}
+                      {sub.quality && <li><strong>Quality Available:</strong> {sub.quality}</li>}
+                    </ul>
+                    {sub.description && <div style={{ marginTop: 8 }}>{sub.description}</div>}
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                    <button
+                      onClick={() => removeFromCart(sub.name)}
+                      style={{
+                        background: '#e63946',
+                        color: '#fff',
+                        border: 'none',
+                        borderRadius: 4,
+                        padding: '0.3rem 0.7rem',
+                        fontSize: 18,
+                        cursor: quantity > 0 ? 'pointer' : 'not-allowed',
+                        opacity: quantity > 0 ? 1 : 0.5,
+                      }}
+                      disabled={quantity === 0}
+                    >−</button>
+                    <span style={{ minWidth: 20, textAlign: 'center' }}>{quantity}</span>
+                    <button
+                      onClick={() => addToCart({
+                        name: sub.name,
+                        price: sub.price,
+                        image: sub.images[0],
+                        quantity: 1
+                      })}
+                      style={{
+                        background: '#2d6a4f',
+                        color: '#fff',
+                        border: 'none',
+                        borderRadius: 4,
+                        padding: '0.3rem 0.7rem',
+                        fontSize: 18,
+                        cursor: 'pointer',
+                      }}
+                    >+</button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
       )}
