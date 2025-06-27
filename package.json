@@ -4,11 +4,12 @@
   "description": "Welcome to the official website repository for Sri Krushi Arganic Farming Varmi Compost.",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
+    "deploy": "gh-pages -d dist",
+    "dev": "vite",
+    "lint": "eslint \"src/**/*.{ts,tsx,js,jsx}\"",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "Akarsh Seggemu",
@@ -16,7 +17,12 @@
   "devDependencies": {
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
+    "@typescript-eslint/eslint-plugin": "^8.35.0",
+    "@typescript-eslint/parser": "^8.35.0",
     "@vitejs/plugin-react": "^4.5.2",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "gh-pages": "^6.3.0",
     "typescript": "^5.8.3",
     "vite": "^6.3.5"
