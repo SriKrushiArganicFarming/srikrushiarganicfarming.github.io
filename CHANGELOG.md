@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.3.0...v0.4.0) (2025-06-27)
+
+
+### Features
+
+* add favicon and web app manifest for improved branding and mobile support ([a120832](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/commit/a120832b34e39bd800afac9412343ca0e6d93996))
+
 ## [0.3.0](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.2.2...v0.3.0) (2025-06-27)
 
 
