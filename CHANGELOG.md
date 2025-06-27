@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.2.2...v0.3.0) (2025-06-27)
+
+
+### Features
+
+* add unit testing workflow and initial tests for App component ([f20721a](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/commit/f20721af91dada24e0bd1891df0244a143133799))
+
 ## [0.2.2](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.2.1...v0.2.2) (2025-06-27)
 
 
