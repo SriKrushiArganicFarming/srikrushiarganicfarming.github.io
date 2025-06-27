@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.4.0...v0.5.0) (2025-06-27)
+
+
+### Features
+
+* implement cart functionality with context and order form ([f4d9d2c](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/commit/f4d9d2cc47a461d7deb1e1f84b796ae4d7b4d264))
+
 ## [0.4.0](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.3.0...v0.4.0) (2025-06-27)
 
 
