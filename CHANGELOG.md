@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.2.0...v0.2.1) (2025-06-27)
+
+
+### Bug Fixes
+
+* change npm ci to npm install for dependency installation in GitHub Actions workflow ([f4b4b05](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/commit/f4b4b054d789c28e6f6e8b88be9328660ba55580))
+
 ## [0.2.0](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.1.0...v0.2.0) (2025-06-27)
 
 
