@@ -17,14 +17,14 @@ import News from './News';
 import ProductDetails from './ProductDetails';
 
 // Helper: useMemo implementation
-function useMemo<T>(factory: () => T, deps: any[]): T {
-  const ref = useRef<{ deps: any[]; value: T } | undefined>(undefined);
+function useMemo<T, D extends ReadonlyArray<unknown>>(factory: () => T, deps: D): T {
+  const ref = useRef<{ deps: D; value: T } | undefined>(undefined);
   if (!ref.current || !areDepsEqual(ref.current.deps, deps)) {
     ref.current = { deps, value: factory() };
   }
   return ref.current.value;
 }
-function areDepsEqual(a: any[], b: any[]): boolean {
+function areDepsEqual<D extends ReadonlyArray<unknown>>(a: D, b: D): boolean {
   if (a.length !== b.length) return false;
   for (let i = 0; i < a.length; i++) {
     if (a[i] !== b[i]) return false;

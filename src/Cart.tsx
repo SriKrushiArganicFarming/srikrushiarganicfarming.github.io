@@ -2,7 +2,14 @@ import React, { useState } from 'react';
 import { useCart } from './CartContext';
 import { Link } from 'react-router-dom';
 
-function getCartMessage(cart: any[], name: string, phone: string) {
+type CartItem = {
+  name: string;
+  image: string;
+  price?: string;
+  quantity: number;
+};
+
+function getCartMessage(cart: CartItem[], name: string, phone: string) {
   let message =
     'Order from Sri Krushi Arganic Farming Varmi Compost:\n\n' +
     cart
@@ -25,7 +32,7 @@ export default function Cart() {
   const [phone, setPhone] = useState('');
   const [showError, setShowError] = useState(false);
 
-  const cartMessage = getCartMessage(cart, name, phone);
+  const cartMessage = getCartMessage(cart as CartItem[], name, phone);
   const emailSubject = encodeURIComponent('Order from Sri Krushi Arganic Farming Varmi Compost');
   const emailBody = encodeURIComponent(cartMessage);
   const whatsappBody = encodeURIComponent(cartMessage);
@@ -41,7 +48,8 @@ export default function Cart() {
     );
   }
 
-  function handleSendClick(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+  // eslint-disable-next-line
+  function handleSendClick(e: React.MouseEvent<HTMLAnchorElement>) {
     if (!canSend) {
       e.preventDefault();
       setShowError(true);
@@ -132,7 +140,6 @@ export default function Cart() {
           href={`mailto:seggemu.saidulu@gmail.com?subject=${emailSubject}&body=${emailBody}`}
           className="cart-send-btn"
           aria-disabled={!canSend}
-          disabled={!canSend}
           onClick={handleSendClick}
         >
           Send via Email
@@ -143,7 +150,6 @@ export default function Cart() {
           rel="noopener noreferrer"
           className="cart-send-btn whatsapp"
           aria-disabled={!canSend}
-          disabled={!canSend}
           onClick={handleSendClick}
         >
           Send via WhatsApp
@@ -152,7 +158,6 @@ export default function Cart() {
           href={`sms:+919177526747?body=${encodeURIComponent(cartMessage)}`}
           className="cart-send-btn sms"
           aria-disabled={!canSend}
-          disabled={!canSend}
           onClick={handleSendClick}
         >
           Send via SMS
