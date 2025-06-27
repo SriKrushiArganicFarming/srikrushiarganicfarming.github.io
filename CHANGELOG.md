@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.2](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.2.1...v0.2.2) (2025-06-27)
+
+
+### Bug Fixes
+
+* update GitHub Actions workflow to use GITHUB_TOKEN and restructure jobs ([ec3d742](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/commit/ec3d74231934cba82d7f92c12f52e2ffbe993f1d))
+* update token in release workflow to use RELEASE_PLEASE_TOKEN ([8eb65bf](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/commit/8eb65bfb89da1500940117c2eb8c992fb4d85232))
+
 ## [0.2.1](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.2.0...v0.2.1) (2025-06-27)
 
 
