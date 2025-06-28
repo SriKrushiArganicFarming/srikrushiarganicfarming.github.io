@@ -15,6 +15,8 @@ import Cart from './Cart';
 import Contact from './Contact';
 import News from './News';
 import ProductDetails from './ProductDetails';
+import PrivacyPolicy from "./PrivacyPolicy";
+import SecurityPolicy from "./SecurityPolicy";
 
 // Helper: useMemo implementation
 function useMemo<T, D extends ReadonlyArray<unknown>>(factory: () => T, deps: D): T {
@@ -140,9 +142,20 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/product/:slug" element={<ProductDetails />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/security-policy" element={<SecurityPolicy />} />
         </Routes>
         <footer className="footer">
-          &copy; {new Date().getFullYear()} SRI KRUSHI ARGANIC FARMING VARMI COMPOST
+          <div className="footer-content">
+            <div className="footer-title">
+              &copy; {new Date().getFullYear()} SRI KRUSHI ARGANIC FARMING VARMI COMPOST
+            </div>
+            <div className="footer-links">
+              <Link to="/privacy-policy">Privacy Policy</Link>
+              <span className="footer-link-separator">|</span>
+              <Link to="/security-policy">Security Policy</Link>
+            </div>
+          </div>
         </footer>
       </div>
     </Router>

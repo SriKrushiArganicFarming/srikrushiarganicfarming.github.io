@@ -159,15 +159,53 @@ body {
 }
 
 .footer {
-    margin-top: 2rem;
-    padding: 1rem 0;
+    margin-top: 2.5rem;
+    padding: 1.5rem 0 1rem 0;
     text-align: center;
-    font-size: 0.95rem;
-    color: #666;
-    background: #f1f1f1;
+    font-size: 1rem;
+    color: #555;
+    background: #f7f7f7;
     border-top: 1px solid #e0e0e0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.03);
 }
 
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.footer-title {
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.2rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    font-size: 0.97rem;
+}
+
+.footer-links a {
+    color: #1976d2;
+    text-decoration: none;
+    transition: color 0.15s;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: #125ea2;
+    text-decoration: underline;
+}
+
+.footer-link-separator {
+    color: #bbb;
+    font-size: 1.1em;
+    user-select: none;
+}
 h1 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
@@ -245,6 +283,15 @@ h2 {
 .order-form .order-form-error {
     color: red;
     margin-bottom: 12px;
+}
+
+.policy-page {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 /* iPhone 5/SE and small devices */
@@ -379,6 +426,17 @@ h2 {
         object-fit: cover;
         border-radius: 8px;
         flex-shrink: 0;
+    }
+    .footer-content {
+        gap: 0.4rem;
+    }
+    .footer-links {
+        gap: 0.7rem;
+        font-size: 0.93rem;
+    }
+    .footer {
+        font-size: 0.92rem;
+        padding: 1rem 0 0.7rem 0;
     }
     h1 {
         font-size: 2.5rem;
