@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.5.0...v0.6.0) (2025-06-28)
+
+
+### Features
+
+* add robots.txt and enhance cart functionality with improved item display and messaging ([1a1ea76](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/commit/1a1ea76737d9403e4c17c4320870e6e6c3afa33c))
+
 ## [0.5.0](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.4.0...v0.5.0) (2025-06-27)
 
 
