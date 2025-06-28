@@ -478,18 +478,23 @@ function ProductDetails() {
               return (
                 <div
                   key={idx}
+                  className="product-details-card"
                   style={{
                     background: '#f8f8f8',
                     borderRadius: 8,
                     padding: '1rem',
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '1rem'
+                    gap: '1rem',
+                    flexDirection: 'row', // default for desktop
                   }}
                 >
-                  <ImageGallery images={sub.images} />
-                  <div>
+                  {/* For mobile, images will be moved below the name using CSS */}
+                  <div className="product-details-main">
                     <h4 style={{ margin: 0 }}>{sub.name}</h4>
+                    <div className="product-details-images-mobile">
+                      <ImageGallery images={sub.images} />
+                    </div>
                     <ul style={{ margin: '0.5rem 0' }}>
                       {sub.price && <li><strong>Price:</strong> {sub.price}</li>}
                       {sub.minOrder && <li><strong>Minimum Order Quantity:</strong> {sub.minOrder}</li>}
@@ -509,40 +514,85 @@ function ProductDetails() {
                       {sub.quality && <li><strong>Quality Available:</strong> {sub.quality}</li>}
                     </ul>
                     {sub.description && <div style={{ marginTop: 8 }}>{sub.description}</div>}
+                    <div className="product-details-cart-mobile">
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                        <button
+                          onClick={() => removeFromCart(sub.name)}
+                          style={{
+                            background: '#e63946',
+                            color: '#fff',
+                            border: 'none',
+                            borderRadius: 4,
+                            padding: '0.3rem 0.7rem',
+                            fontSize: 18,
+                            cursor: quantity > 0 ? 'pointer' : 'not-allowed',
+                            opacity: quantity > 0 ? 1 : 0.5,
+                          }}
+                          disabled={quantity === 0}
+                        >−</button>
+                        <span style={{ minWidth: 20, textAlign: 'center' }}>{quantity}</span>
+                        <button
+                          onClick={() => addToCart({
+                            name: sub.name,
+                            price: sub.price,
+                            image: sub.images[0],
+                            quantity: 1,
+                            packSize: sub.packSize,
+                          })}
+                          style={{
+                            background: '#2d6a4f',
+                            color: '#fff',
+                            border: 'none',
+                            borderRadius: 4,
+                            padding: '0.3rem 0.7rem',
+                            fontSize: 18,
+                            cursor: 'pointer',
+                          }}
+                        >+</button>
+                      </div>
+                    </div>
                   </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <button
-                      onClick={() => removeFromCart(sub.name)}
-                      style={{
-                        background: '#e63946',
-                        color: '#fff',
-                        border: 'none',
-                        borderRadius: 4,
-                        padding: '0.3rem 0.7rem',
-                        fontSize: 18,
-                        cursor: quantity > 0 ? 'pointer' : 'not-allowed',
-                        opacity: quantity > 0 ? 1 : 0.5,
-                      }}
-                      disabled={quantity === 0}
-                    >−</button>
-                    <span style={{ minWidth: 20, textAlign: 'center' }}>{quantity}</span>
-                    <button
-                      onClick={() => addToCart({
-                        name: sub.name,
-                        price: sub.price,
-                        image: sub.images[0],
-                        quantity: 1
-                      })}
-                      style={{
-                        background: '#2d6a4f',
-                        color: '#fff',
-                        border: 'none',
-                        borderRadius: 4,
-                        padding: '0.3rem 0.7rem',
-                        fontSize: 18,
-                        cursor: 'pointer',
-                      }}
-                    >+</button>
+                  {/* Desktop image gallery (hidden on mobile) */}
+                  <div className="product-details-images-desktop">
+                    <ImageGallery images={sub.images} />
+                  </div>
+                  {/* Desktop cart controls (hidden on mobile) */}
+                  <div className="product-details-cart-desktop">
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                      <button
+                        onClick={() => removeFromCart(sub.name)}
+                        style={{
+                          background: '#e63946',
+                          color: '#fff',
+                          border: 'none',
+                          borderRadius: 4,
+                          padding: '0.3rem 0.7rem',
+                          fontSize: 18,
+                          cursor: quantity > 0 ? 'pointer' : 'not-allowed',
+                          opacity: quantity > 0 ? 1 : 0.5,
+                        }}
+                        disabled={quantity === 0}
+                      >−</button>
+                      <span style={{ minWidth: 20, textAlign: 'center' }}>{quantity}</span>
+                      <button
+                        onClick={() => addToCart({
+                          name: sub.name,
+                          price: sub.price,
+                          image: sub.images[0],
+                          quantity: 1,
+                          packSize: sub.packSize,
+                        })}
+                        style={{
+                          background: '#2d6a4f',
+                          color: '#fff',
+                          border: 'none',
+                          borderRadius: 4,
+                          padding: '0.3rem 0.7rem',
+                          fontSize: 18,
+                          cursor: 'pointer',
+                        }}
+                      >+</button>
+                    </div>
                   </div>
                 </div>
               );

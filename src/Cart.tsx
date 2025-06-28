@@ -11,7 +11,7 @@ type CartItem = {
 
 function getCartMessage(cart: CartItem[], name: string, phone: string) {
   let message =
-    'Order from Sri Krushi Arganic Farming Varmi Compost:\n\n' +
+    'Order for Sri Krushi Arganic Farming Varmi Compost:\n\n' +
     cart
       .map(
         (item, idx) =>
@@ -109,7 +109,11 @@ export default function Cart() {
             />
             <div className="cart-item-details">
               <strong>{item.name}</strong>
-              <div>{item.price}</div>
+              {item.price ? (
+                <div className="cart-item-price">{item.price}</div>
+              ) : item.packSize ? (
+                <div className="cart-item-size">Size: {item.packSize}</div>
+              ) : null}
               <div className="cart-qty-controls">
                 <button
                   className="cart-btn-minus"
@@ -135,6 +139,9 @@ export default function Cart() {
           </li>
         ))}
       </ul>
+      <div style={{ fontWeight: 600, margin: '1rem 0' }}>
+        Total items in Cart: {cart.reduce((sum, item) => sum + item.quantity, 0)}
+      </div>
       <div className="cart-send-btn-group">
         <a
           href={`mailto:seggemu.saidulu@gmail.com?subject=${emailSubject}&body=${emailBody}`}
@@ -162,6 +169,9 @@ export default function Cart() {
         >
           Send via SMS
         </a>
+      </div>
+      <div style={{ margin: '1rem 0', color: '#1976d2', fontWeight: 500, textAlign: 'center' }}>
+        Your order will be processed after you send it. We will contact you soon to confirm and arrange delivery.
       </div>
       <button className="cart-clear-btn" onClick={clearCart}>
         Clear Cart
