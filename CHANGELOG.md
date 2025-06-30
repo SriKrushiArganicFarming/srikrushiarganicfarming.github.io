@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.0](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.6.0...v0.7.0) (2025-06-28)
+
+
+### Features
+
+* add privacy policy and security polcy ([2ee065d](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/commit/2ee065d38591d3d735dc024c6433f5a913b47267))
+* update footer with security and privacy policies. ([92c3153](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/commit/92c315317e5a1c52fb2eeaef2c15b5c66fa85951))
+
 ## [0.6.0](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.5.0...v0.6.0) (2025-06-28)
 
 
