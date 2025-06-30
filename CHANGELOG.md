@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.7.0...v0.8.0) (2025-06-30)
+
+
+### Features
+
+* Add blog and news articles ([312e805](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/commit/312e805a643bde1d3a53b460c20b61f6a6f80d37))
+
 ## [0.7.0](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.6.0...v0.7.0) (2025-06-28)
 
 
