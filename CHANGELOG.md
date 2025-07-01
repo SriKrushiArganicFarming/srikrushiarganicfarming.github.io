@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.1](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.8.0...v0.8.1) (2025-07-01)
+
+
+### Bug Fixes
+
+* refactor news, blog, about and contact us pages ([75828f8](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/commit/75828f83415e0f3230c841701cecbfc199e5ca47))
+
 ## [0.8.0](https://github.com/SriKrushiArganicFarmingVarmiCompost/srikrushiarganicfarmingvarmicompost.github.io/compare/v0.7.0...v0.8.0) (2025-06-30)
 
 
