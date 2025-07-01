@@ -1,5 +1,7 @@
 import React from 'react';
 
+import grandFatherWithGroundNuts from './assets/blog/PHOTO-2022-07-01-09-38-08.jpg'
+
 export default function Contact() {
   return (
     <div>
@@ -8,6 +10,17 @@ export default function Contact() {
         For inquiries about our products, orders, or any other questions, please reach out to us
         using the contact information below. We are here to assist you!
       </p>
+      <img
+        src={grandFatherWithGroundNuts}
+        alt="Grandfather with Ground Nuts"
+        style={{
+          width: '65%',
+          height: 'auto',
+          display: 'block',
+          margin: '0 auto',
+          borderRadius: '5%',
+        }}
+      />
       <h3>Contact Information</h3>
       <section>
         <strong>S. Aruna (Proprietor)</strong>

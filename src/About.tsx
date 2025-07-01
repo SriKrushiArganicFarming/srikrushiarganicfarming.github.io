@@ -1,11 +1,20 @@
 import React from 'react';
 
+import founderGrandFather from './assets/blog/PHOTO-2022-04-09-17-57-48.jpg'
+
 export default function About() {
   return (
     <div>
       <h2>About Us</h2>
       <p>
-        Since establishment in the year 2005, we are focusing on becoming one of the most familiar and trustworthy name of this industry and for this, we make sure to perform our manufacturing activities in an efficient and ethical manner. The range of products in which we deal is Neem Powder and Natural Varmi Compost. Our corporation is specializes in the quick and efficient shipment of ordered consignments by the means of logistic facility.
+        Since our establishment in 2005, we have been committed to becoming one of the most familiar and trustworthy names in the industry. To achieve this, we ensure that all our manufacturing activities are carried out efficiently and ethically.
+      </p>
+      <p>
+        We specialize in producing high-quality Neem Powder and Natural Varmi Compost. Additionally, our company takes pride in providing fast and reliable shipment of orders through our well-organized logistics network.
+      </p>
+      <img src={founderGrandFather} alt="About Us Image" style={{ width: '85%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '5%' }} />
+      <p>
+      
       </p>
       <h3>Why Us?</h3>
       <p>

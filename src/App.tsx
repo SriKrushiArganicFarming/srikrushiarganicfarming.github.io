@@ -107,6 +107,7 @@ function App() {
     <Router>
       <div className="container">
         <nav className="nav">
+          <img src={logo} alt="Site Logo" style={{ width: '24px', height: '24px', verticalAlign: 'middle', marginRight: '8px' }} />
           <div
             className="nav-dropdown"
             onMouseEnter={() => setShowDropdown(true)}
@@ -133,6 +134,7 @@ function App() {
           <Link to="/contact">Contact</Link>
           <Link to="/cart">Cart</Link>
         </nav>
+        <div className="subheader" />
         <Routes>
           <Route path="/" element={<Products />} />
           <Route path="/products" element={<Products />} />
