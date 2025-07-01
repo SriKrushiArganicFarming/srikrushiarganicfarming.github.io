@@ -37,7 +37,7 @@ export default function Contact() {
       </section>
       <h3>Reach Us</h3>
       <address>
-        <strong>Sri Krushi Arganic Farming Varmi Compost</strong>
+        <strong>Sri Krushi Organic Farming</strong>
         <br />
         01, BALEMLA,
         <br />

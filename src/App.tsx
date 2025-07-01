@@ -69,7 +69,7 @@ function Products() {
   return (
     <>
       <img src={logo} alt="Sri Krushi Organic Farming Logo" className="logo" />
-      <h1>Sri Krushi Arganic Farming Varmi Compost</h1>
+      <h1>Sri Krushi Organic Farming</h1>
       <p>
         We are dedicated to sustainable agriculture and organic farming practices since 2005. We provide high-quality organic products and promote eco-friendly farming methods.
       </p>
@@ -150,7 +150,7 @@ function App() {
         <footer className="footer">
           <div className="footer-content">
             <div className="footer-title">
-              &copy; {new Date().getFullYear()} SRI KRUSHI ARGANIC FARMING VARMI COMPOST
+              &copy; {new Date().getFullYear()} SRI KRUSHI ORGANIC FARMING
             </div>
             <div className="footer-links">
               <Link to="/privacy-policy">Privacy Policy</Link>

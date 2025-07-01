@@ -35,7 +35,7 @@ export default function News() {
     <div>
       <h2>News</h2>
       <p>
-        Latest news and announcements from Sri Krushi Arganic Farming Varmi Compost.
+        Latest news and announcements from Sri Krushi Organic Farming.
       </p>
       <div>
         {newsArticles.map((article) => (

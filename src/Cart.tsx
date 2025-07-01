@@ -11,7 +11,7 @@ type CartItem = {
 
 function getCartMessage(cart: CartItem[], name: string, phone: string) {
   let message =
-    'Order for Sri Krushi Arganic Farming Varmi Compost:\n\n' +
+    'Order for Sri Krushi Organic Farming:\n\n' +
     cart
       .map(
         (item, idx) =>
@@ -33,7 +33,7 @@ export default function Cart() {
   const [showError, setShowError] = useState(false);
 
   const cartMessage = getCartMessage(cart as CartItem[], name, phone);
-  const emailSubject = encodeURIComponent('Order from Sri Krushi Arganic Farming Varmi Compost');
+  const emailSubject = encodeURIComponent('Order from Sri Krushi Organic Farming');
   const emailBody = encodeURIComponent(cartMessage);
   const whatsappBody = encodeURIComponent(cartMessage);
 

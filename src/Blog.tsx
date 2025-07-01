@@ -23,7 +23,7 @@ const blogArticles = [
     "title": "Journey from TSRTC Union Leader to Organic Farming Pioneer: Ch. Pichaiah’s Story",
     image: grandFatherWalking,
     alt: 'Grandfather walking',
-    "content": "Ch. Pichaiah is a retired former secretary of the RTC Employees Union and TSRTC (Telangana State Road Transport Corporation) employee. Originally from Agaram village in Telangana, India. He dedicated over 30 years as a bus driver before returning to his agricultural roots.\n\nWith over 40 years of experience in organic farming, Pichaiah is the founder of Sri Krushi Arganic Varmi Compost. His passion for sustainable agriculture and deep knowledge of organic practices have been key to the venture’s success.\n\nHe is actively involved in all aspects of the business from managing orders and delivering products to addressing customer queries. Committed to quality and community.\n\nHe is also focused on promoting organic farming and educating young farmers and consumers about its long-term benefits."
+    "content": "Ch. Pichaiah is a retired former secretary of the RTC Employees Union and TSRTC (Telangana State Road Transport Corporation) employee. Originally from Agraharam village in Telangana, India. He dedicated over 30 years as a bus driver before returning to his agricultural roots.\n\nWith over 40 years of experience in organic farming, Pichaiah is the founder of Sri Krushi Organic Farming. His passion for sustainable agriculture and deep knowledge of organic practices have been key to the venture’s success.\n\nHe is actively involved in all aspects of the business from managing orders and delivering products to addressing customer queries. Committed to quality and community.\n\nHe is also focused on promoting organic farming and educating young farmers and consumers about its long-term benefits."
   },
   {
     "id": 2,
@@ -98,7 +98,7 @@ export default function Blog() {
     <div>
       <h2>Blog</h2>
       <p>
-        Stay tuned for articles and updates on organic farming, Varmi Composting, and more!
+        Stay tuned for articles and updates on organic farming, and more!
       </p>
       <div>
         {blogArticles.map((article) => (

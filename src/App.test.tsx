@@ -21,7 +21,7 @@ describe('App Component', () => {
     render(<App />);
     const year = new Date().getFullYear();
     expect(
-      screen.getByText(new RegExp(`© ${year} SRI KRUSHI ARGANIC FARMING VARMI COMPOST`, 'i'))
+      screen.getByText(new RegExp(`© ${year} SRI KRUSHI ORGANIC FARMING`, 'i'))
     ).toBeInTheDocument();
   });
 });

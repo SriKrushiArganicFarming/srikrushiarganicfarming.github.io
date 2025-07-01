@@ -10,7 +10,7 @@ export default function About() {
         Since our establishment in 2005, we have been committed to becoming one of the most familiar and trustworthy names in the industry. To achieve this, we ensure that all our manufacturing activities are carried out efficiently and ethically.
       </p>
       <p>
-        We specialize in producing high-quality Neem Powder and Natural Varmi Compost. Additionally, our company takes pride in providing fast and reliable shipment of orders through our well-organized logistics network.
+        We specialize in producing high-quality Neem Powder and Natural Vermicompost. Additionally, our company takes pride in providing fast and reliable shipment of orders through our well-organized logistics network.
       </p>
       <img src={founderGrandFather} alt="About Us Image" style={{ width: '85%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '5%' }} />
       <p>
