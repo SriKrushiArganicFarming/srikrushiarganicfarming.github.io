@@ -17,10 +17,11 @@ import dadInFrontOfMangoTreesTwo from './assets/blog/PHOTO-2022-05-15-15-36-22.j
 import dadInFrontOfMangoTreesThree from './assets/blog/PHOTO-2022-05-15-15-36-23.jpg'
 import agricultureScientistOne from './assets/blog/WhatsApp Image 2025-07-02-1.jpeg'
 import agricultureScientistTwo from './assets/blog/WhatsApp Image 2025-07-02-2.jpeg'
-import agricultureScientistThree from './assets/blog/WhatsApp Image 2025-07-02-4.jpeg'
-import agricultureScientistFour from './assets/blog/WhatsApp Image 2025-07-02-5.jpeg'
-import agricultureScientistFive from './assets/blog/WhatsApp Image 2025-07-02-6.jpeg'
-import agricultureScientistSix from './assets/blog/WhatsApp Image 2025-07-02-7.jpeg'
+import agricultureScientistThree from './assets/blog/WhatsApp Image 2025-07-02-3.jpeg'
+import agricultureScientistFour from './assets/blog/WhatsApp Image 2025-07-02-4.jpeg'
+import agricultureScientistFive from './assets/blog/WhatsApp Image 2025-07-02-5.jpeg'
+import agricultureScientistSix from './assets/blog/WhatsApp Image 2025-07-02-6.jpeg'
+import agricultureScientistSeven from './assets/blog/WhatsApp Image 2025-07-02-7.jpeg'
 import agricultureScientistEight from './assets/blog/WhatsApp Image 2025-07-02-8.jpeg'
 
 const blogArticles = [
