@@ -15,7 +15,13 @@ import grandFatherWithGroundNutsFive from './assets/blog/PHOTO-2022-05-15-15-38-
 import grandFatherWithGroundNutsSix from './assets/blog/PHOTO-2022-05-15-15-38-21.jpg'
 import dadInFrontOfMangoTreesTwo from './assets/blog/PHOTO-2022-05-15-15-36-22.jpg'
 import dadInFrontOfMangoTreesThree from './assets/blog/PHOTO-2022-05-15-15-36-23.jpg'
-
+import agricultureScientistOne from './assets/blog/WhatsApp Image 2025-07-02-1.jpeg'
+import agricultureScientistTwo from './assets/blog/WhatsApp Image 2025-07-02-2.jpeg'
+import agricultureScientistThree from './assets/blog/WhatsApp Image 2025-07-02-4.jpeg'
+import agricultureScientistFour from './assets/blog/WhatsApp Image 2025-07-02-5.jpeg'
+import agricultureScientistFive from './assets/blog/WhatsApp Image 2025-07-02-6.jpeg'
+import agricultureScientistSix from './assets/blog/WhatsApp Image 2025-07-02-7.jpeg'
+import agricultureScientistEight from './assets/blog/WhatsApp Image 2025-07-02-8.jpeg'
 
 const blogArticles = [
   {
@@ -91,6 +97,22 @@ const blogArticles = [
     alt: 'Dad in front of mango trees two',
     "content": "Spending another proud moment with my dad among our flourishing mango trees reminds me how deeply his passion for organic farming shapes our journey.\n\nSeeing him stand proudly in front of the trees is more than just a photo—it's a testament to his hard work, dedication, and the values our family holds close with every harvest."
   },
+  {
+    "id": 10,
+    "title": "Renowned Agriculture Scientist Dr. Ch. Raghu Visits Sri Krushi Organic Farming, Applauds Sustainable Efforts",
+    images: [
+      agricultureScientistOne,
+      agricultureScientistTwo,
+      agricultureScientistThree,
+      agricultureScientistFour,
+      agricultureScientistFive,
+      agricultureScientistSix,
+      agricultureScientistSeven,
+      agricultureScientistEight
+    ],
+    alt: '',
+    "content": "Renowned agricultural scientist Dr. Ch. Raghu son of Ch. Pichaiah is based in Germany. He is our guest at Sri Krushi Organic Farming and appreciated our farm’s dedication to follow sustainable and organic farming methods. During his visit, he observed the soil health initiatives and eco-friendly cultivation methods implemented by the team. He commended the farm’s efforts in promoting chemical-free agriculture and preserving traditional farming knowledge of Telangana, India.\n\nDr. Raghu’s feedback highlighted the farm’s role in following environmental health, farmer well-being and food safety. This visit not only strengthened our commitment to organic practices but also inspired us to continue our journey towards sustainable agriculture.\n\nWe are grateful for his visit and support, which motivates us to keep pushing the boundaries of organic farming."
+  }
 ];
 
 export default function Blog() {
@@ -101,22 +123,34 @@ export default function Blog() {
         Stay tuned for articles and updates on organic farming, and more!
       </p>
       <div>
-        {blogArticles.map((article) => (
-          <div key={article.id} style={{ marginBottom: '20px' }}>
-            <h3>{article.title}</h3>
-            {article.images ? (
-              <div className="news-image-gallery">
-                {article.images.map((image, index) => (
-                  <img key={index} src={image} alt={article.alt} style={{ width: '100%', height: 'auto' }} />
-                ))}
-              </div>
-            ) : (
-              <img src={article.image} alt={article.alt} style={{ width: '100%', height: 'auto' }} />
-            )}
-            <p style={{ whiteSpace: 'pre-line' }}>{article.content}</p>
-          </div>
-        ))}
+        {blogArticles
+          .sort((a, b) => b.id - a.id) // Sort in descending order by id
+          .map((article) => (
+            <div key={article.id} style={{ marginBottom: '20px' }}>
+              <h3>{article.title}</h3>
+              {article.images ? (
+                <div className="news-image-gallery">
+                  {article.images.map((image, index) => (
+                    <img
+                      key={index}
+                      src={image}
+                      alt={article.alt}
+                      style={{ width: '100%', height: 'auto' }}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <img
+                  src={article.image}
+                  alt={article.alt}
+                  style={{ width: '100%', height: 'auto' }}
+                />
+              )}
+              <p style={{ whiteSpace: 'pre-line' }}>{article.content}</p>
+            </div>
+          ))}
       </div>
+
     </div>
   );
 }
