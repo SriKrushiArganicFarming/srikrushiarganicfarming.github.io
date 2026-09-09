@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.1](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.1.0...v1.1.1) (2026-09-09)
+
+
+### Bug Fixes
+
+* improve product browsing and accessibility ([5dc8f2d](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/5dc8f2db74498f589d118cc3656841bcaf3abbda))
+* update token reference in release workflow to use RELEASE_PLEASE_TOKEN ([2ba6c08](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/2ba6c08b82be061216517992a9b28fbb0158b9df))
+* update token reference in release workflow to use secrets.RELEASE_PLEASE_TOKEN ([f80cf3c](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/f80cf3c8744e6955b91b51d1e2953a02ecb76ed7))
+
 ## [1.1.0](https://github.com/SriKrushiArganicFarming/srikrushiarganicfarming.github.io/compare/v1.0.0...v1.1.0) (2025-07-02)
 
 
