@@ -53,20 +53,20 @@ function Products() {
     <>
       <img src={logo} alt="Sri Krushi Organic Farming Logo" className="logo" />
       <h1>Sri Krushi Organic Farming</h1>
-      <p className="home-intro">Organic farming and natural products from Balemla, Suryapet district, since 2005.</p>
+      <p className="home-intro">Naturally grown products from Balemla, Suryapet district.</p>
       <section>
-        <div className="trust-highlights" aria-label="Why choose Sri Krushi Organic Farming">
-          <div><strong>Since 2005</strong><span>Trusted organic farming</span></div>
-          <div><strong>Organic products</strong><span>Kind to soil and crops</span></div>
-          <div><strong>Bulk orders</strong><span>Contact us for availability</span></div>
+        <div className="home-highlights" aria-label="Sri Krushi Organic Farming highlights">
+          <span>Established 2005</span>
+          <span>Organic farming</span>
+          <span>Bulk orders welcome</span>
         </div>
         <section className="home-order" aria-labelledby="order-heading">
           <div>
-            <h2 id="order-heading">Order from Sri Krushi</h2>
-            <p>For product availability, bulk orders, or farm directions, contact us directly.</p>
+            <h2 id="order-heading">Need help ordering?</h2>
+            <p>Call or WhatsApp to check availability, or get directions to our farm.</p>
           </div>
           <div className="home-order-actions">
-            <a href="tel:+919177526747">Call us</a>
+            <a href="tel:+919177526747">Call</a>
             <a href="https://wa.me/919177526747" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             <a href="https://maps.app.goo.gl/vv5BXPwD5ZscGkf59" target="_blank" rel="noopener noreferrer">Directions</a>
           </div>
