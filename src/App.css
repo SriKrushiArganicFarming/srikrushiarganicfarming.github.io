@@ -353,8 +353,6 @@ h2 {
     border-radius: 8px;
     display: block;
     height: auto;
-    max-height: 420px;
-    object-fit: cover;
     width: 100%;
 }
 
