@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useMemo, useState } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes } from 'react-router-dom';
 
 import './App.css';
@@ -17,22 +17,6 @@ import News from './News';
 import ProductDetails from './ProductDetails';
 import PrivacyPolicy from "./PrivacyPolicy";
 import SecurityPolicy from "./SecurityPolicy";
-
-// Helper: useMemo implementation
-function useMemo<T, D extends ReadonlyArray<unknown>>(factory: () => T, deps: D): T {
-  const ref = useRef<{ deps: D; value: T } | undefined>(undefined);
-  if (!ref.current || !areDepsEqual(ref.current.deps, deps)) {
-    ref.current = { deps, value: factory() };
-  }
-  return ref.current.value;
-}
-function areDepsEqual<D extends ReadonlyArray<unknown>>(a: D, b: D): boolean {
-  if (a.length !== b.length) return false;
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] !== b[i]) return false;
-  }
-  return true;
-}
 
 // Product data
 const PRODUCTS = [

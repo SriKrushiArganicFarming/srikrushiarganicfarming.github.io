@@ -30,7 +30,8 @@ export default [
         },
         plugins: { '@typescript-eslint': tseslint },
         rules: {
-            ...tseslint.configs.recommended.rules
+            ...tseslint.configs.recommended.rules,
+            'no-undef': 'off'
         }
     },
     {

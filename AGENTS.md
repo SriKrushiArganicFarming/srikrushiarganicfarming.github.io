@@ -44,5 +44,4 @@ This repository is the static website for Sri Krushi Organic Farming. It is a Vi
 
 - Move duplicated product data into a shared typed module.
 - Persist cart state to local storage if users should keep orders across refreshes.
-- Replace the custom `useMemo` helper in `src/App.tsx` with React's built-in `useMemo`.
 - Expand tests around cart operations, order message generation, and product detail rendering.

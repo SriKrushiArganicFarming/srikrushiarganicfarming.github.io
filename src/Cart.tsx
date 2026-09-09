@@ -27,7 +27,7 @@ function getCartMessage(cart: CartItem[], name: string, phone: string) {
 }
 
 export default function Cart() {
-  const { cart, addToCart, removeFromCart, clearCart } = useCart();
+  const { cart, addToCart, decrementItem, clearCart } = useCart();
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [showError, setShowError] = useState(false);
@@ -48,7 +48,6 @@ export default function Cart() {
     );
   }
 
-  // eslint-disable-next-line
   function handleSendClick(e: React.MouseEvent<HTMLAnchorElement>) {
     if (!canSend) {
       e.preventDefault();
@@ -117,7 +116,7 @@ export default function Cart() {
               <div className="cart-qty-controls">
                 <button
                   className="cart-btn-minus"
-                  onClick={() => removeFromCart(item.name)}
+                  onClick={() => decrementItem(item.name)}
                   disabled={item.quantity === 0}
                 >
                   −

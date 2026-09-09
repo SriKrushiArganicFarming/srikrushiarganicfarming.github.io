@@ -441,7 +441,7 @@ function ImageGallery({ images }: { images: string[] }) {
  */
 function ProductDetails() {
   const { slug } = useParams<{ slug: string }>();
-  const { cart, addToCart, removeFromCart } = useCart();
+  const { cart, addToCart, decrementItem } = useCart();
   const product = PRODUCTS.find(p => p.slug === slug);
 
   // Helper to get quantity in cart for a sub-product
@@ -517,7 +517,7 @@ function ProductDetails() {
                     <div className="product-details-cart-mobile">
                       <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                         <button
-                          onClick={() => removeFromCart(sub.name)}
+                          onClick={() => decrementItem(sub.name)}
                           style={{
                             background: '#e63946',
                             color: '#fff',
@@ -560,7 +560,7 @@ function ProductDetails() {
                   <div className="product-details-cart-desktop">
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                       <button
-                        onClick={() => removeFromCart(sub.name)}
+                        onClick={() => decrementItem(sub.name)}
                         style={{
                           background: '#e63946',
                           color: '#fff',
