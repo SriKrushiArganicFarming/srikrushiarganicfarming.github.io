@@ -493,6 +493,235 @@ h2 {
     background: #1f513a;
 }
 
+.contact-page {
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.contact-hero {
+    align-items: start;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr);
+    margin-bottom: 1.25rem;
+}
+
+.contact-intro {
+    color: #1f513a;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 1.25rem;
+}
+
+.contact-image {
+    aspect-ratio: 4 / 5;
+    border-radius: 10px;
+    display: block;
+    height: 360px;
+    margin: 0;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.contact-location-column {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: flex-start;
+}
+
+.contact-actions a {
+    background: #2d6a4f;
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.6rem 1rem;
+    text-decoration: none;
+}
+
+.contact-actions a:hover {
+    background: #1f513a;
+}
+
+.contact-actions a:focus-visible {
+    outline: 3px solid #8bc34a;
+    outline-offset: 3px;
+}
+
+.contact-information-card {
+    margin-top: 1.25rem;
+}
+
+@media (max-width: 599px) {
+    .contact-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-image {
+        aspect-ratio: auto;
+        height: auto;
+        margin-top: 0.25rem;
+    }
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 1.25rem;
+}
+
+.contact-card h3 {
+    color: #1f513a;
+    margin: 0 0 1rem;
+}
+
+.contact-person,
+.contact-card address {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    gap: 0.25rem;
+}
+
+.contact-person + .contact-person {
+    border-top: 1px solid #e7eee9;
+    margin-top: 0.85rem;
+    padding-top: 0.85rem;
+}
+
+.contact-person span,
+.contact-card address span {
+    color: #496254;
+}
+
+.contact-person a {
+    color: #1f6b45;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact-person a:hover {
+    text-decoration: underline;
+}
+
+.about-page {
+    margin: 0 auto;
+    max-width: 860px;
+}
+
+.about-hero {
+    align-items: start;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: minmax(0, 1.25fr) minmax(220px, 0.75fr);
+    margin-bottom: 1.25rem;
+}
+
+.about-intro {
+    color: #1f513a;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.about-hero a {
+    color: #1f6b45;
+    font-weight: 700;
+}
+
+.about-image {
+    border-radius: 10px;
+    display: block;
+    aspect-ratio: 4 / 5;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.about-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-top: 1rem;
+    padding: 1.25rem;
+}
+
+.about-card h3 {
+    color: #1f513a;
+    margin: 0 0 1rem;
+}
+
+.about-benefits {
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.about-facts {
+    display: grid;
+    gap: 0;
+    margin: 0;
+}
+
+.about-facts div {
+    border-top: 1px solid #e7eee9;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: minmax(135px, 0.8fr) minmax(0, 1.2fr);
+    padding: 0.7rem 0;
+}
+
+.about-facts div:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.about-facts dt {
+    color: #496254;
+    font-weight: 600;
+}
+
+.about-facts dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.about-detail-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+.about-detail-grid .about-card {
+    margin-top: 1rem;
+}
+
+@media (max-width: 599px) {
+    .about-hero,
+    .about-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        max-height: 340px;
+    }
+
+    .about-facts div {
+        grid-template-columns: 1fr;
+        gap: 0.15rem;
+    }
+}
+
 .nav a {
     color: #2d6a4f;
     text-decoration: none;
