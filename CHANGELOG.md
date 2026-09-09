@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.1.1...v1.2.0) (2026-09-09)
+
+
+### Features
+
+* add 404 page and handle redirect logic in main.tsx ([b8deea3](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/b8deea30b499df333195508fc611e5605b16dbb2))
+* add chronological sorting for blog articles and implement tests for rendering ([037aaae](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/037aaae3044eb677a81b276f043c7d58651b2efa))
+
 ## [1.1.1](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.1.0...v1.1.1) (2026-09-09)
 
 
