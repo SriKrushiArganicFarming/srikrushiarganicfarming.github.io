@@ -1,10 +1,9 @@
 import js from '@eslint/js';
-import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 
-/** @type {import("eslint").Linter.FlatConfig[]} */
+/** @type {import("eslint").Linter.Config[]} */
 export default [
     {
         ...js.configs.recommended,
@@ -35,13 +34,9 @@ export default [
         }
     },
     {
-        plugins: { react, 'react-hooks': reactHooks },
+        plugins: { 'react-hooks': reactHooks },
         rules: {
-            ...react.configs.recommended.rules,
-            'react/react-in-jsx-scope': 'off'
-        },
-        settings: {
-            react: { version: 'detect' }
+            ...reactHooks.configs.recommended.rules
         }
     }
 ];
