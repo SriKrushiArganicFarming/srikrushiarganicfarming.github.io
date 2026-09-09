@@ -5,10 +5,21 @@ import grandFatherWorkIsAppreciatedInPressForEducatingOnFishFarmingThree from '.
 import grandFatherWorkIsAppreciatedInPressForEducatingOnFishFarmingFour from './assets/news/PHOTO-2022-05-20-17-41-39.jpg'
 import grandFatherWorkIsAppreciatedInPressForEducatingOnFishFarmingFive from './assets/news/PHOTO-2022-05-20-17-41-40.jpg'
 
-const newsArticles = [
+type NewsArticle = {
+  id: number;
+  title: string;
+  date: string;
+  image?: string;
+  images?: string[];
+  alt: string;
+  content: string;
+};
+
+const newsArticles: NewsArticle[] = [
   {
     "id": 1,
     "title": "Grandfather and Grandmother Donating Food Supplies to Workers During Covid",
+    "date": "2021-06-08",
     image: grandFatherAndGrandMotherDonatingFoodSuppliesToWorkersDuringCovid,
     alt: 'Grandfather and Grandmother donating food supplies to workers during Covid',
     "content": "During the challenging times of the Covid pandemic, my grandfather Ch. Pichaiah and grandmother Ch. Achamma took the initiative to donate food supplies to workers in need. Their selfless act of kindness exemplifies the spirit of community and support that we cherish."
@@ -16,6 +27,7 @@ const newsArticles = [
   {
     "id": 2,
     "title": "Grandfather Ch. Pichaiah Educating Young Farmers and making them aware of the initiatives from the Government for Sustainable Fish Farming",
+    "date": "2022-05-20",
     images: [
       grandFatherWorkIsAppreciatedInPressForEducatingOnFishFarmingOne,
       grandFatherWorkIsAppreciatedInPressForEducatingOnFishFarmingTwo,
@@ -29,6 +41,10 @@ const newsArticles = [
 ];
 
 export default function News() {
+  const chronologicalArticles = [...newsArticles].sort(
+    (a, b) => a.date.localeCompare(b.date) || a.id - b.id
+  );
+
   return (
     <div>
       <h2>News</h2>
@@ -36,13 +52,25 @@ export default function News() {
         Latest news and announcements from Sri Krushi Organic Farming.
       </p>
       <div>
-        {newsArticles.map((article) => (
+        {chronologicalArticles.map((article) => (
           <div key={article.id} style={{ marginBottom: '20px' }}>
             <h3>{article.title}</h3>
+            <time dateTime={article.date}>
+              {new Intl.DateTimeFormat('en-IN', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+              }).format(new Date(`${article.date}T00:00:00`))}
+            </time>
             {article.images ? (
               <div className="news-image-gallery">
                 {article.images.map((image, index) => (
-                  <img key={index} src={image} alt={article.alt} style={{ width: '100%', height: 'auto' }} />
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`${article.alt} (${index + 1} of ${article.images!.length})`}
+                    style={{ width: '100%', height: 'auto' }}
+                  />
                 ))}
               </div>
             ) : (
