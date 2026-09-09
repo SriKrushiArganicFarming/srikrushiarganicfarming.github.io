@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.4.0...v1.5.0) (2026-09-09)
+
+
+### Features
+
+* update Blog and News components to display articles in chronological order and enhance UI with new styles ([5a35773](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/5a35773842731b35099a2ab78bcf82394f3da602))
+
 ## [1.4.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.3.0...v1.4.0) (2026-09-09)
 
 
