@@ -55,13 +55,17 @@ export default function News() {
       <p>
         Latest news and announcements from Sri Krushi Organic Farming.
       </p>
-      <button
-        type="button"
-        onClick={() => setNewestFirst((current) => !current)}
-        aria-pressed={newestFirst}
-      >
-        Sort: {newestFirst ? 'Newest first' : 'Oldest first'}
-      </button>
+      <div className="article-sort-controls">
+        <button
+          type="button"
+          className="article-sort-button"
+          onClick={() => setNewestFirst((current) => !current)}
+          aria-pressed={newestFirst}
+        >
+          <span aria-hidden="true">⇅</span>
+          Sort: {newestFirst ? 'Newest first' : 'Oldest first'}
+        </button>
+      </div>
       <div>
         {sortedArticles.map((article) => (
           <div key={article.id} style={{ marginBottom: '20px' }}>

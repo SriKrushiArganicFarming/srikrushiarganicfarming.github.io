@@ -149,13 +149,17 @@ export default function Blog() {
       <p>
         Stay tuned for articles and updates on organic farming, and more!
       </p>
-      <button
-        type="button"
-        onClick={() => setNewestFirst((current) => !current)}
-        aria-pressed={newestFirst}
-      >
-        Sort: {newestFirst ? 'Newest first' : 'Oldest first'}
-      </button>
+      <div className="article-sort-controls">
+        <button
+          type="button"
+          className="article-sort-button"
+          onClick={() => setNewestFirst((current) => !current)}
+          aria-pressed={newestFirst}
+        >
+          <span aria-hidden="true">⇅</span>
+          Sort: {newestFirst ? 'Newest first' : 'Oldest first'}
+        </button>
+      </div>
       <div>
         {sortedArticles.map((article) => (
             <div key={article.id} style={{ marginBottom: '20px' }}>
