@@ -425,6 +425,17 @@ h2 {
     transition: background 0.15s;
 }
 
+.nav .site-logo-link {
+    display: inline-flex;
+    padding: 0.25rem;
+}
+
+.site-logo {
+    display: block;
+    height: 24px;
+    width: 24px;
+}
+
 .nav a:hover {
     background: #e0f2e9;
 }

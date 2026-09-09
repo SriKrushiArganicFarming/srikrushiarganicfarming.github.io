@@ -15,6 +15,7 @@ function renderApp() {
 describe('App Component', () => {
   test('renders navigation links', () => {
     renderApp();
+    expect(screen.getByRole('link', { name: /home/i })).toHaveAttribute('href', '/');
     expect(screen.getByRole('link', { name: /about/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /blog/i })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /news/i })).toBeInTheDocument();

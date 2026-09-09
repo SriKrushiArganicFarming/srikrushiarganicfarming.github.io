@@ -126,7 +126,9 @@ function App() {
       <div className="container">
         <PageMetadata />
         <nav className="nav">
-          <img src={logo} alt="Site Logo" style={{ width: '24px', height: '24px', verticalAlign: 'middle', marginRight: '8px' }} />
+          <Link to="/" className="site-logo-link" aria-label="Sri Krushi Organic Farming home">
+            <img src={logo} alt="" className="site-logo" />
+          </Link>
           <div
             className="nav-dropdown"
             onMouseEnter={() => setShowDropdown(true)}
