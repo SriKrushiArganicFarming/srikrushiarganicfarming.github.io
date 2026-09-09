@@ -1,5 +1,3 @@
-import React from 'react';
-
 import grandFatherWithGroundNuts from './assets/blog/PHOTO-2022-07-01-09-38-08.jpg'
 
 export default function Contact() {

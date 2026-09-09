@@ -282,7 +282,6 @@ h2 {
     transition: background 0.15s;
 }
 
-.nav a.active,
 .nav a:hover {
     background: #e0f2e9;
 }

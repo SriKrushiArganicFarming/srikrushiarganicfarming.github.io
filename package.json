@@ -10,6 +10,7 @@
     "lint": "eslint \"src/**/*.{ts,tsx,js,jsx}\"",
     "predeploy": "npm run build",
     "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest watch"
   },

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import grandFatherWalking from './assets/blog/PHOTO-2018-09-15-19-07-52.jpg'
 import dadAndGrandFatherInFrontOfMangoTrees from './assets/blog/PHOTO-2021-01-06-17-28-18.jpg'
 import grandFatherInFrontOfMangoTrees from './assets/blog/PHOTO-2021-01-06-17-28-25.jpg'

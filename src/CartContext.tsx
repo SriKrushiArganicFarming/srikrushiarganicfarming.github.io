@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, type ReactNode } from 'react';
 
 export type CartItem = {
   name: string;
@@ -11,7 +11,6 @@ export type CartItem = {
 type CartContextType = {
   cart: CartItem[];
   addToCart: (item: CartItem) => void;
-  removeFromCart: (name: string) => void;
   decrementItem: (name: string) => void;
   clearCart: () => void;
 };
@@ -39,10 +38,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
     });
   }
 
-  function removeFromCart(name: string) {
-    setCart((prev) => prev.filter((i) => i.name !== name));
-  }
-
   function decrementItem(name: string) {
     setCart((prev) =>
       prev
@@ -58,7 +53,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }
 
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, decrementItem, clearCart }}>
+    <CartContext.Provider value={{ cart, addToCart, decrementItem, clearCart }}>
       {children}
     </CartContext.Provider>
   );

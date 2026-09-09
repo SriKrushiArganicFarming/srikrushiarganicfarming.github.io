@@ -61,7 +61,40 @@ const neemCakePowderImages = [neemCakePowderImg1, neemCakePowderImg2];
 const fertilizerNeemPowderImages = [fertilizerNeemPowderImg];
 const herbalNeemPowderImages = [herbalNeemPowderImg];
 
-const PRODUCTS = [
+type SubProduct = {
+  name: string;
+  images: string[];
+  description: string;
+  price?: string;
+  minOrder?: string;
+  usage?: string;
+  packType?: string;
+  form?: string;
+  packSize?: string;
+  grade?: string;
+  isOrganic?: string;
+  type?: string;
+  processingType?: string;
+  packagingSizes?: string;
+  brand?: string;
+  color?: string;
+  cultivationType?: string;
+  variety?: string;
+  quality?: string;
+  isDried?: string;
+  state?: string;
+  speciality?: string;
+};
+
+type Product = {
+  slug: string;
+  name: string;
+  description: string;
+  image: string;
+  subProducts: SubProduct[];
+};
+
+const PRODUCTS: Product[] = [
   {
     slug: 'vermicompost',
     name: 'Natural Vermicompost',
@@ -518,7 +551,10 @@ function ProductDetails() {
                       {sub.form && <li><strong>Form:</strong> {sub.form}</li>}
                       {sub.grade && <li><strong>Grade Standard:</strong> {sub.grade}</li>}
                       {sub.isOrganic && <li><strong>Is It Organic:</strong> {sub.isOrganic}</li>}
+                      {sub.isDried && <li><strong>Is It Dried:</strong> {sub.isDried}</li>}
+                      {sub.state && <li><strong>State:</strong> {sub.state}</li>}
                       {sub.type && <li><strong>Type:</strong> {sub.type}</li>}
+                      {sub.speciality && <li><strong>Speciality:</strong> {sub.speciality}</li>}
                       {sub.processingType && <li><strong>Processing Type:</strong> {sub.processingType}</li>}
                       {sub.packagingSizes && <li><strong>Packaging Sizes:</strong> {sub.packagingSizes}</li>}
                       {sub.usage && <li><strong>Usage/Application:</strong> {sub.usage}</li>}
@@ -622,5 +658,4 @@ function ProductDetails() {
 }
 
 
-export { ImageGallery };
 export default ProductDetails;

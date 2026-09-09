@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 import { CartProvider, useCart } from './CartContext';
 
 function CartHarness() {
-  const { cart, addToCart, decrementItem, removeFromCart } = useCart();
+  const { cart, addToCart, decrementItem } = useCart();
   const item = cart.find((cartItem) => cartItem.name === 'Organic Mango');
 
   return (
@@ -24,7 +24,6 @@ function CartHarness() {
         Add
       </button>
       <button onClick={() => decrementItem('Organic Mango')}>Decrease</button>
-      <button onClick={() => removeFromCart('Organic Mango')}>Remove</button>
     </div>
   );
 }
@@ -45,20 +44,6 @@ describe('CartContext', () => {
     expect(screen.getByTestId('quantity')).toHaveTextContent('1');
 
     fireEvent.click(screen.getByRole('button', { name: /decrease/i }));
-    expect(screen.getByTestId('quantity')).toHaveTextContent('0');
-  });
-
-  test('can remove a cart line regardless of quantity', () => {
-    render(
-      <CartProvider>
-        <CartHarness />
-      </CartProvider>
-    );
-
-    fireEvent.click(screen.getByRole('button', { name: /add/i }));
-    fireEvent.click(screen.getByRole('button', { name: /add/i }));
-    fireEvent.click(screen.getByRole('button', { name: /remove/i }));
-
     expect(screen.getByTestId('quantity')).toHaveTextContent('0');
   });
 });

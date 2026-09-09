@@ -1,5 +1,3 @@
-import React from 'react';
-
 import grandFatherAndGrandMotherDonatingFoodSuppliesToWorkersDuringCovid from './assets/news/PHOTO-2021-06-08-07-04-59.jpg'
 import grandFatherWorkIsAppreciatedInPressForEducatingOnFishFarmingOne from './assets/news/PHOTO-2022-05-20-17-41-38-2.jpg'
 import grandFatherWorkIsAppreciatedInPressForEducatingOnFishFarmingTwo from './assets/news/PHOTO-2022-05-20-17-41-38.jpg'

@@ -1,5 +1,3 @@
-import React from 'react';
-
 import founderGrandFather from './assets/blog/PHOTO-2022-04-09-17-57-48.jpg'
 
 export default function About() {
