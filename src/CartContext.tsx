@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 
 export type CartItem = {
   name: string;
@@ -16,6 +16,17 @@ type CartContextType = {
 };
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
+const CART_STORAGE_KEY = 'sri-krushi-cart';
+
+function getStoredCart(): CartItem[] {
+  try {
+    if (typeof window === 'undefined' || typeof window.localStorage?.getItem !== 'function') return [];
+    const storedCart = window.localStorage.getItem(CART_STORAGE_KEY);
+    return storedCart ? JSON.parse(storedCart) : [];
+  } catch {
+    return [];
+  }
+}
 
 export function useCart() {
   const ctx = useContext(CartContext);
@@ -24,7 +35,17 @@ export function useCart() {
 }
 
 export function CartProvider({ children }: { children: ReactNode }) {
-  const [cart, setCart] = useState<CartItem[]>([]);
+  const [cart, setCart] = useState<CartItem[]>(getStoredCart);
+
+  useEffect(() => {
+    try {
+      if (typeof window.localStorage?.setItem === 'function') {
+        window.localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+      }
+    } catch {
+      // Keep the cart available in memory when browser storage is unavailable.
+    }
+  }, [cart]);
 
   function addToCart(item: CartItem) {
     setCart((prev) => {

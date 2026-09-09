@@ -44,7 +44,7 @@ export default function Contact() {
         Telangana, India
         <br />
         <a
-          href="https://maps.google.com/?q=BALEMLA+Balemla+Cross+Road+508213+Suriapet+Nalgonda+Telangana+India"
+          href="https://maps.app.goo.gl/vv5BXPwD5ZscGkf59"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -469,6 +469,48 @@ h2 {
     text-align: center;
 }
 
+.home-order {
+    align-items: center;
+    background: #eaf5ee;
+    border: 1px solid #cae6d3;
+    border-radius: 10px;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin: 1.25rem 0;
+    padding: 1rem;
+}
+
+.home-order h2 {
+    font-size: 1.15rem;
+    margin: 0 0 0.25rem;
+    text-align: left;
+}
+
+.home-order p {
+    margin: 0;
+}
+
+.home-order-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.home-order-actions a {
+    background: #2d6a4f;
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+}
+
+.home-order-actions a:hover {
+    background: #1f513a;
+}
+
 .nav a {
     color: #2d6a4f;
     text-decoration: none;
@@ -501,6 +543,11 @@ h2 {
 
 .nav a:active {
     background: #e0f2e9;
+}
+
+.nav a.active {
+    background: #e0f2e9;
+    color: #1f513a;
 }
 
 .nav-dropdown {
@@ -656,6 +703,15 @@ h2 {
         padding: 0.25rem 0.35rem;
     }
 
+    .home-order {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .home-order-actions {
+        justify-content: flex-start;
+    }
+
     h1 {
         font-size: 1.1rem;
     }
@@ -747,6 +803,15 @@ h2 {
 
     .nav a {
         padding: 0.3rem 0.45rem;
+    }
+
+    .home-order {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .home-order-actions {
+        justify-content: flex-start;
     }
 
     h1 {

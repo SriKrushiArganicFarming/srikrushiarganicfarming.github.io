@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Link, Route, Routes, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 
 import './App.css';
 
@@ -24,25 +24,25 @@ const PRODUCTS = [
   {
     slug: 'mangoes',
     name: 'Organic Mangoes',
-    description: 'We are a leading Manufacturer of Organic Mango from Nalgonda, India.',
+    description: 'Naturally grown mangoes from Balemla.',
     image: mangoImg,
   },
   {
     slug: 'millets',
     name: 'Millets',
-    description: 'Manufacturer of a wide range of products which include Andu Korralu (Brown Top).',
+    description: 'Brown-top millets for everyday meals.',
     image: milletsImg,
   },
   {
     slug: 'neem-powder',
     name: 'Neem Powder',
-    description: 'We are a leading Manufacturer of Neem Leaves Powder, Organic Neem Powder, Natural Neem Powder, Neem Cake Powder, Neem Powder Fertilizer and Herbal Neem Powder from Nalgonda, India.',
+    description: 'Natural neem powders and neem-cake products.',
     image: neemPowderImg,
   },
   {
     slug: 'vermicompost',
     name: 'Natural Vermicompost',
-    description: 'Offering you a complete choice of products which include Vermicompost Organic Manure, Organic Vermicompost, Fertilizer Vermicompost, Vermicompost Powder and Worm Vermicompost.',
+    description: 'Organic vermicompost to support healthy soil.',
     image: vermicompostImg,
   },
 ];
@@ -60,6 +60,17 @@ function Products() {
           <div><strong>Organic products</strong><span>Kind to soil and crops</span></div>
           <div><strong>Bulk orders</strong><span>Contact us for availability</span></div>
         </div>
+        <section className="home-order" aria-labelledby="order-heading">
+          <div>
+            <h2 id="order-heading">Order from Sri Krushi</h2>
+            <p>For product availability, bulk orders, or farm directions, contact us directly.</p>
+          </div>
+          <div className="home-order-actions">
+            <a href="tel:+919177526747">Call us</a>
+            <a href="https://wa.me/919177526747" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            <a href="https://maps.app.goo.gl/vv5BXPwD5ZscGkf59" target="_blank" rel="noopener noreferrer">Directions</a>
+          </div>
+        </section>
         <h2>Our Products</h2>
         <div className="products">
           {PRODUCTS.map((product) => (
@@ -86,6 +97,15 @@ function Products() {
 function PageMetadata() {
   const { pathname } = useLocation();
   const product = PRODUCTS.find((item) => pathname === `/product/${item.slug}`);
+  const pageDescriptions: Record<string, string> = {
+    '/': 'Organic farming and natural products from Balemla in Telangana’s Suryapet district.',
+    '/products': 'Browse organic mangoes, millets, neem products, and vermicompost from Sri Krushi Organic Farming.',
+    '/about': 'Learn about Sri Krushi Organic Farming and our commitment to sustainable agriculture.',
+    '/blog': 'Read stories and updates from Sri Krushi Organic Farming.',
+    '/news': 'See news and announcements from Sri Krushi Organic Farming.',
+    '/contact': 'Contact Sri Krushi Organic Farming in Balemla, Suryapet district, Telangana.',
+    '/cart': 'Review your selected Sri Krushi Organic Farming products and send an order enquiry.',
+  };
   const pageName = product?.name ?? {
     '/about': 'About Us',
     '/blog': 'Blog',
@@ -95,12 +115,13 @@ function PageMetadata() {
     '/privacy-policy': 'Privacy Policy',
     '/security-policy': 'Security Policy',
   }[pathname] ?? 'Organic Products';
+  const pageDescription = product?.description ?? pageDescriptions[pathname] ?? 'Organic products from Sri Krushi Organic Farming.';
 
   useEffect(() => {
     document.title = `${pageName} | Sri Krushi Organic Farming`;
     const description = document.querySelector('meta[name="description"]');
-    description?.setAttribute('content', `Explore ${pageName.toLowerCase()} from Sri Krushi Organic Farming.`);
-  }, [pageName]);
+    description?.setAttribute('content', pageDescription);
+  }, [pageDescription, pageName]);
 
   return null;
 }
@@ -136,7 +157,7 @@ function App() {
               if (!event.currentTarget.contains(event.relatedTarget)) setShowDropdown(false);
             }}
           >
-            <Link to="/products">Products</Link>
+            <NavLink to="/products">Products</NavLink>
             <button
               type="button"
               className="nav-dropdown-toggle"
@@ -160,14 +181,14 @@ function App() {
               </div>
             )}
           </div>
-          <Link to="/about">About</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/news">News</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/cart" className="cart-nav-link">
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/blog">Blog</NavLink>
+          <NavLink to="/news">News</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/cart" className="cart-nav-link">
             Cart
             {cartItemCount > 0 && <span className="cart-count" aria-label={`${cartItemCount} items`}>{cartItemCount}</span>}
-          </Link>
+          </NavLink>
         </nav>
         <div className="subheader" />
         <Routes>
