@@ -1,6 +1,6 @@
 # Security Policy
 
-_Last updated: June 28, 2025_
+_Last updated: June 28, 2026_
 
 We take the security of our website and users seriously.
 

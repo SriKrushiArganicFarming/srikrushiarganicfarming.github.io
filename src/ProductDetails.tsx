@@ -195,7 +195,7 @@ const PRODUCTS = [
   },
   {
     slug: 'mangoes',
-    name: 'Organic Mango',
+    name: 'Organic Mangoes',
     description: 'Farm fresh Organic Mangos cultivated in our garden. Since these are Organic you can find them very rich in taste and freshness. We can deliver them in bulk.',
     image: mangoImg,
     subProducts: [
@@ -243,7 +243,7 @@ const PRODUCTS = [
  * @param {Object} props
  * @param {string[]} props.images - Array of image URLs to display in the gallery.
  */
-function ImageGallery({ images }: { images: string[] }) {
+function ImageGallery({ images, label = 'Product' }: { images: string[]; label?: string }) {
   const [zoomed, setZoomed] = useState<number | null>(null);
   const [current, setCurrent] = useState(0);
   const touchStart = useRef<number | null>(null);
@@ -303,21 +303,26 @@ function ImageGallery({ images }: { images: string[] }) {
             ‹
           </button>
         )}
-        <img
-          src={images[current]}
-          alt=""
-          style={{
-            width: 72,
-            height: 72,
-            objectFit: 'cover',
-            borderRadius: 8,
-            background: '#fff',
-            cursor: 'pointer',
-            border: zoomed === current ? '2px solid #388e3c' : 'none',
-            transition: 'border 0.2s'
-          }}
+        <button
+          type="button"
+          aria-label={`View enlarged ${label} image ${current + 1}`}
           onClick={() => setZoomed(current)}
-        />
+          style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+        >
+          <img
+            src={images[current]}
+            alt={`${label} image ${current + 1}`}
+            style={{
+              width: 72,
+              height: 72,
+              objectFit: 'cover',
+              borderRadius: 8,
+              background: '#fff',
+              border: zoomed === current ? '2px solid #388e3c' : 'none',
+              transition: 'border 0.2s'
+            }}
+          />
+        </button>
         {images.length > 1 && (
           <button
             aria-label="Next"
@@ -332,21 +337,31 @@ function ImageGallery({ images }: { images: string[] }) {
       {images.length > 1 && (
         <div style={{ display: 'flex', gap: 4, marginTop: 4 }}>
           {images.map((img, idx) => (
-            <img
+            <button
               key={idx}
-              src={img}
-              alt=""
+              type="button"
+              aria-label={`Show ${label} image ${idx + 1}`}
               style={{
-                width: 24,
-                height: 24,
-                objectFit: 'cover',
-                borderRadius: 4,
-                border: idx === current ? '2px solid #388e3c' : '1px solid #ccc',
                 cursor: 'pointer',
-                background: '#fff'
+                background: 'none',
+                border: 'none',
+                padding: 0
               }}
               onClick={() => setCurrent(idx)}
-            />
+            >
+              <img
+                src={img}
+                alt={`${label} thumbnail ${idx + 1}`}
+                style={{
+                  width: 24,
+                  height: 24,
+                  objectFit: 'cover',
+                  borderRadius: 4,
+                  border: idx === current ? '2px solid #388e3c' : '1px solid #ccc',
+                  background: '#fff'
+                }}
+              />
+            </button>
           ))}
         </div>
       )}
@@ -397,7 +412,7 @@ function ImageGallery({ images }: { images: string[] }) {
             )}
             <img
               src={images[zoomed]}
-              alt=""
+              alt={`${label} image ${zoomed + 1}`}
               style={{
                 maxWidth: '90vw',
                 maxHeight: '90vh',
@@ -493,7 +508,7 @@ function ProductDetails() {
                   <div className="product-details-main">
                     <h4 style={{ margin: 0 }}>{sub.name}</h4>
                     <div className="product-details-images-mobile">
-                      <ImageGallery images={sub.images} />
+                      <ImageGallery images={sub.images} label={sub.name} />
                     </div>
                     <ul style={{ margin: '0.5rem 0' }}>
                       {sub.price && <li><strong>Price:</strong> {sub.price}</li>}
@@ -554,7 +569,7 @@ function ProductDetails() {
                   </div>
                   {/* Desktop image gallery (hidden on mobile) */}
                   <div className="product-details-images-desktop">
-                    <ImageGallery images={sub.images} />
+                    <ImageGallery images={sub.images} label={sub.name} />
                   </div>
                   {/* Desktop cart controls (hidden on mobile) */}
                   <div className="product-details-cart-desktop">
