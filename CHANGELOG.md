@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.9.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.8.0...v1.9.0) (2026-09-09)
+
+
+### Features
+
+* add sitemap.xml and enhance robots.txt; implement persistent cart storage with localStorage ([dac8865](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/dac8865bb24cb8a17c2fe5440d13b71716c3e326))
+* enhance About and Contact pages with improved layout, styling, and accessibility features ([05e3c4e](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/05e3c4e1f3bc5226c90c61bc5b44f13e71df1fbc))
+* update homepage highlights and improve ordering section for clarity ([fde5419](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/fde5419eaae6cc255dea7fa6df723519f46a2289))
+
 ## [1.8.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.7.0...v1.8.0) (2026-09-09)
 
 
