@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.5.0...v1.6.0) (2026-09-09)
+
+
+### Features
+
+* enhance product display by removing unnecessary sorting and updating tests for catalogue order ([79c5378](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/79c537824a6398c01f1a1d99252d3d8cd2b96881))
+
 ## [1.5.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.4.0...v1.5.0) (2026-09-09)
 
 
