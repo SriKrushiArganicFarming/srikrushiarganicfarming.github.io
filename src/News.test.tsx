@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, test } from 'vitest';
 
 import News from './News';
@@ -11,5 +11,15 @@ describe('News', () => {
       'Grandfather and Grandmother Donating Food Supplies to Workers During Covid',
       'Grandfather Ch. Pichaiah Educating Young Farmers and making them aware of the initiatives from the Government for Sustainable Fish Farming',
     ]);
+  });
+
+  test('can sort articles from newest to oldest', () => {
+    render(<News />);
+
+    fireEvent.click(screen.getByRole('button', { name: /sort: oldest first/i }));
+
+    expect(screen.getAllByRole('heading', { level: 3 })[0].textContent).toBe(
+      'Grandfather Ch. Pichaiah Educating Young Farmers and making them aware of the initiatives from the Government for Sustainable Fish Farming'
+    );
   });
 });

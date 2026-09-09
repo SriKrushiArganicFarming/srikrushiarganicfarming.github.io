@@ -135,8 +135,12 @@ const blogArticles: BlogArticle[] = [
 ];
 
 export default function Blog() {
-  const chronologicalArticles = [...blogArticles].sort(
-    (a, b) => a.date.localeCompare(b.date) || a.id - b.id
+  const [newestFirst, setNewestFirst] = useState(false);
+  const sortedArticles = [...blogArticles].sort(
+    (a, b) =>
+      newestFirst
+        ? b.date.localeCompare(a.date) || b.id - a.id
+        : a.date.localeCompare(b.date) || a.id - b.id
   );
 
   return (
@@ -145,8 +149,15 @@ export default function Blog() {
       <p>
         Stay tuned for articles and updates on organic farming, and more!
       </p>
+      <button
+        type="button"
+        onClick={() => setNewestFirst((current) => !current)}
+        aria-pressed={newestFirst}
+      >
+        Sort: {newestFirst ? 'Newest first' : 'Oldest first'}
+      </button>
       <div>
-        {chronologicalArticles.map((article) => (
+        {sortedArticles.map((article) => (
             <div key={article.id} style={{ marginBottom: '20px' }}>
               <h3>{article.title}</h3>
               <time dateTime={article.date}>
@@ -182,3 +193,4 @@ export default function Blog() {
     </div>
   );
 }
+import { useState } from 'react';

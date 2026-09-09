@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, test } from 'vitest';
 
 import Blog from './Blog';
@@ -19,5 +19,15 @@ describe('Blog', () => {
       "Among the Mango Trees: A Tribute to My Father's Passion for Organic Farming",
       'Renowned Agriculture Scientist Dr. Ch. Raghu Visits Sri Krushi Organic Farming, Applauds Sustainable Efforts',
     ]);
+  });
+
+  test('can sort articles from newest to oldest', () => {
+    render(<Blog />);
+
+    fireEvent.click(screen.getByRole('button', { name: /sort: oldest first/i }));
+
+    expect(screen.getAllByRole('heading', { level: 3 })[0].textContent).toBe(
+      'Renowned Agriculture Scientist Dr. Ch. Raghu Visits Sri Krushi Organic Farming, Applauds Sustainable Efforts'
+    );
   });
 });

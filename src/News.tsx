@@ -41,8 +41,12 @@ const newsArticles: NewsArticle[] = [
 ];
 
 export default function News() {
-  const chronologicalArticles = [...newsArticles].sort(
-    (a, b) => a.date.localeCompare(b.date) || a.id - b.id
+  const [newestFirst, setNewestFirst] = useState(false);
+  const sortedArticles = [...newsArticles].sort(
+    (a, b) =>
+      newestFirst
+        ? b.date.localeCompare(a.date) || b.id - a.id
+        : a.date.localeCompare(b.date) || a.id - b.id
   );
 
   return (
@@ -51,8 +55,15 @@ export default function News() {
       <p>
         Latest news and announcements from Sri Krushi Organic Farming.
       </p>
+      <button
+        type="button"
+        onClick={() => setNewestFirst((current) => !current)}
+        aria-pressed={newestFirst}
+      >
+        Sort: {newestFirst ? 'Newest first' : 'Oldest first'}
+      </button>
       <div>
-        {chronologicalArticles.map((article) => (
+        {sortedArticles.map((article) => (
           <div key={article.id} style={{ marginBottom: '20px' }}>
             <h3>{article.title}</h3>
             <time dateTime={article.date}>
@@ -83,3 +94,4 @@ export default function News() {
     </div>
   );
 }
+import { useState } from 'react';
