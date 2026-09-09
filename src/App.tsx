@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Link, Route, Routes, useLocation } from 'react-router-dom';
 
 import './App.css';
@@ -49,8 +49,6 @@ const PRODUCTS = [
 
 // Products page component
 function Products() {
-  // Sort products alphabetically by name
-  const sortedProducts = [...PRODUCTS].sort((a, b) => a.name.localeCompare(b.name));
   return (
     <>
       <img src={logo} alt="Sri Krushi Organic Farming Logo" className="logo" />
@@ -66,7 +64,7 @@ function Products() {
           <div><strong>Bulk orders</strong><span>Contact us for availability</span></div>
         </div>
         <div className="products">
-          {sortedProducts.map((product) => (
+          {PRODUCTS.map((product) => (
             <Link
               to={`/product/${product.slug}`}
               className="product-card"
@@ -123,11 +121,6 @@ function App() {
   const [showDropdown, setShowDropdown] = useState(false);
   const { cart } = useCart();
   const cartItemCount = cart.reduce((total, item) => total + item.quantity, 0);
-  // Sort products alphabetically by name for dropdown
-  const sortedProducts = useMemo(
-    () => [...PRODUCTS].sort((a, b) => a.name.localeCompare(b.name)),
-    []
-  );
   return (
     <Router>
       <div className="container">
@@ -155,7 +148,7 @@ function App() {
             </button>
             {showDropdown && (
               <div className="dropdown-menu">
-                {sortedProducts.map((product) => (
+                {PRODUCTS.map((product) => (
                   <Link
                     key={product.slug}
                     to={`/product/${product.slug}`}

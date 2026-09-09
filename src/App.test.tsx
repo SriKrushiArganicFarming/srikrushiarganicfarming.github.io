@@ -26,6 +26,18 @@ describe('App Component', () => {
     expect(screen.getByRole('heading', { name: /our products/i })).toBeInTheDocument();
   });
 
+  test('shows products in catalogue order', () => {
+    renderApp();
+    const productLinks = screen.getAllByRole('link', { name: /view products/i });
+
+    expect(productLinks.map((link) => link.getAttribute('href'))).toEqual([
+      '/product/mangoes',
+      '/product/millets',
+      '/product/neem-powder',
+      '/product/vermicompost',
+    ]);
+  });
+
   test('renders footer text', () => {
     renderApp();
     const year = new Date().getFullYear();
