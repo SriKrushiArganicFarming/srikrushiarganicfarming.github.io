@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.2.0...v1.3.0) (2026-09-09)
+
+
+### Features
+
+* add sorting functionality for articles in Blog and News components ([7abc0cf](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/7abc0cf4e9eea955f73f46381bde380665d43bc6))
+* implement chronological sorting for news articles and add date display ([d3d8463](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/d3d8463e6e1803a15363d7320175853bf7a54f73))
+
 ## [1.2.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.1.1...v1.2.0) (2026-09-09)
 
 
