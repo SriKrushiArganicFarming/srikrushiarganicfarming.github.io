@@ -135,7 +135,7 @@ const blogArticles: BlogArticle[] = [
 ];
 
 export default function Blog() {
-  const [newestFirst, setNewestFirst] = useState(false);
+  const [newestFirst, setNewestFirst] = useState(true);
   const sortedArticles = [...blogArticles].sort(
     (a, b) =>
       newestFirst
@@ -160,11 +160,11 @@ export default function Blog() {
           Sort: {newestFirst ? 'Newest first' : 'Oldest first'}
         </button>
       </div>
-      <div>
+      <div className="article-list">
         {sortedArticles.map((article) => (
-            <div key={article.id} style={{ marginBottom: '20px' }}>
+            <article key={article.id} className="article-card">
               <h3>{article.title}</h3>
-              <time dateTime={article.date}>
+              <time className="article-date" dateTime={article.date}>
                 {new Intl.DateTimeFormat('en-IN', {
                   day: 'numeric',
                   month: 'long',
@@ -172,7 +172,7 @@ export default function Blog() {
                 }).format(new Date(`${article.date}T00:00:00`))}
               </time>
               {article.images ? (
-                <div className="news-image-gallery">
+                <div className="article-image-gallery">
                   {article.images.map((image, index) => (
                     <img
                       key={index}
@@ -186,11 +186,11 @@ export default function Blog() {
                 <img
                   src={article.image}
                   alt={article.alt}
-                  style={{ width: '100%', height: 'auto' }}
+                  className="article-image"
                 />
               )}
               <p style={{ whiteSpace: 'pre-line' }}>{article.content}</p>
-            </div>
+            </article>
           ))}
       </div>
 

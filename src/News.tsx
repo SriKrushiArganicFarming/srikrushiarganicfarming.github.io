@@ -41,7 +41,7 @@ const newsArticles: NewsArticle[] = [
 ];
 
 export default function News() {
-  const [newestFirst, setNewestFirst] = useState(false);
+  const [newestFirst, setNewestFirst] = useState(true);
   const sortedArticles = [...newsArticles].sort(
     (a, b) =>
       newestFirst
@@ -66,11 +66,11 @@ export default function News() {
           Sort: {newestFirst ? 'Newest first' : 'Oldest first'}
         </button>
       </div>
-      <div>
+      <div className="article-list">
         {sortedArticles.map((article) => (
-          <div key={article.id} style={{ marginBottom: '20px' }}>
+          <article key={article.id} className="article-card">
             <h3>{article.title}</h3>
-            <time dateTime={article.date}>
+            <time className="article-date" dateTime={article.date}>
               {new Intl.DateTimeFormat('en-IN', {
                 day: 'numeric',
                 month: 'long',
@@ -78,21 +78,21 @@ export default function News() {
               }).format(new Date(`${article.date}T00:00:00`))}
             </time>
             {article.images ? (
-              <div className="news-image-gallery">
+              <div className="article-image-gallery">
                 {article.images.map((image, index) => (
                   <img
                     key={index}
                     src={image}
                     alt={`${article.alt} (${index + 1} of ${article.images!.length})`}
-                    style={{ width: '100%', height: 'auto' }}
+                    className="article-image"
                   />
                 ))}
               </div>
             ) : (
-              <img src={article.image} alt={article.alt} style={{ width: '100%', height: 'auto' }} />
+              <img src={article.image} alt={article.alt} className="article-image" />
             )}
             <p style={{ whiteSpace: 'pre-line' }}>{article.content}</p>
-          </div>
+          </article>
         ))}
       </div>
     </div>
