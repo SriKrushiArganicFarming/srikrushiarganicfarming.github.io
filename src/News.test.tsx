@@ -8,8 +8,8 @@ describe('News', () => {
     render(<News />);
 
     expect(screen.getAllByRole('article').map((article) => within(article).getByRole('heading', { level: 3 }).textContent)).toEqual([
-      'Grandfather Ch. Pichaiah Educating Young Farmers and making them aware of the initiatives from the Government for Sustainable Fish Farming',
-      'Grandfather and Grandmother Donating Food Supplies to Workers During Covid',
+      'Grandfather Ch. Pichaiah Educating Young Farmers About Government Initiatives for Sustainable Fish Farming',
+      'Grandfather and Grandmother Donating Food Supplies to Workers During COVID-19',
     ]);
   });
 
@@ -19,7 +19,7 @@ describe('News', () => {
     fireEvent.click(screen.getByRole('button', { name: /sort: newest first/i }));
 
     expect(within(screen.getAllByRole('article')[0]).getByRole('heading', { level: 3 }).textContent).toBe(
-      'Grandfather and Grandmother Donating Food Supplies to Workers During Covid'
+      'Grandfather and Grandmother Donating Food Supplies to Workers During COVID-19'
     );
   });
 });

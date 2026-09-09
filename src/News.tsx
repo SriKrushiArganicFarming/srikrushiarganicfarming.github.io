@@ -18,15 +18,15 @@ type NewsArticle = {
 const newsArticles: NewsArticle[] = [
   {
     "id": 1,
-    "title": "Grandfather and Grandmother Donating Food Supplies to Workers During Covid",
+    "title": "Grandfather and Grandmother Donating Food Supplies to Workers During COVID-19",
     "date": "2021-06-08",
     image: grandFatherAndGrandMotherDonatingFoodSuppliesToWorkersDuringCovid,
-    alt: 'Grandfather and Grandmother donating food supplies to workers during Covid',
-    "content": "During the challenging times of the Covid pandemic, my grandfather Ch. Pichaiah and grandmother Ch. Achamma took the initiative to donate food supplies to workers in need. Their selfless act of kindness exemplifies the spirit of community and support that we cherish."
+    alt: 'Grandfather and grandmother donating food supplies to workers during COVID-19',
+    "content": "During the challenging times of the COVID-19 pandemic, my grandfather, Ch. Pichaiah, and grandmother, Ch. Achamma, took the initiative to donate food supplies to workers in need. Their selfless act of kindness exemplifies the spirit of community and support that we cherish."
   },
   {
     "id": 2,
-    "title": "Grandfather Ch. Pichaiah Educating Young Farmers and making them aware of the initiatives from the Government for Sustainable Fish Farming",
+    "title": "Grandfather Ch. Pichaiah Educating Young Farmers About Government Initiatives for Sustainable Fish Farming",
     "date": "2022-05-20",
     images: [
       grandFatherWorkIsAppreciatedInPressForEducatingOnFishFarmingOne,
@@ -36,7 +36,7 @@ const newsArticles: NewsArticle[] = [
       grandFatherWorkIsAppreciatedInPressForEducatingOnFishFarmingFive
     ],
     alt: 'Grandfather\'s work appreciated in press for educating on fish farming',
-    "content": "My grandfather Ch. Pichaiah's dedication to educating young farmers and creating awareness about sustainable fish farming practices has been recognized in the press. His efforts to promote eco-friendly farming techniques are making a significant impact in the young farmers community."
+    "content": "My grandfather Ch. Pichaiah's dedication to educating young farmers and raising awareness of sustainable fish-farming practices has been recognized in the press. His efforts to promote eco-friendly farming techniques are making a significant impact on the young farming community."
   }
 ];
 

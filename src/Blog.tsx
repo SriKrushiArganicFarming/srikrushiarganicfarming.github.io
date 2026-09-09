@@ -39,15 +39,15 @@ const blogArticles: BlogArticle[] = [
     "date": "2018-09-15",
     image: grandFatherWalking,
     alt: 'Grandfather walking',
-    "content": "Ch. Pichaiah is a retired former secretary of the RTC Employees Union and TSRTC (Telangana State Road Transport Corporation) employee. Originally from Agraharam village in Telangana, India. He dedicated over 30 years as a bus driver before returning to his agricultural roots.\n\nWith over 40 years of experience in organic farming, Pichaiah is the founder of Sri Krushi Organic Farming. His passion for sustainable agriculture and deep knowledge of organic practices have been key to the venture’s success.\n\nHe is actively involved in all aspects of the business from managing orders and delivering products to addressing customer queries. Committed to quality and community.\n\nHe is also focused on promoting organic farming and educating young farmers and consumers about its long-term benefits."
+    "content": "Ch. Pichaiah is a retired secretary of the RTC Employees Union and a former employee of TSRTC (Telangana State Road Transport Corporation). Originally from Agraharam village in Telangana, India, he dedicated over 30 years to working as a bus driver before returning to his agricultural roots.\n\nWith over 40 years of experience in organic farming, Pichaiah is the founder of Sri Krushi Organic Farming. His passion for sustainable agriculture and deep knowledge of organic practices have been key to the venture’s success.\n\nHe is actively involved in all aspects of the business, from managing orders and delivering products to addressing customer queries. He is committed to quality and community.\n\nHe also focuses on promoting organic farming and educating young farmers and consumers about its long-term benefits."
   },
   {
     "id": 2,
-    "title": "From Telangana State Excise Department Excise Superintendent to Organic Farming Advocate: The Story of S. Saidulu",
+    "title": "From Excise Superintendent to Organic Farming Advocate: The Story of S. Saidulu",
     "date": "2021-04-09",
     image: dadInFrontOfMangoTreesOne,
     alt: 'Dad in front of mango trees',
-    "content": "S.Saidulu is a retired Excise Superintendent of the TSED (Telangana State Excise Department). Originally from Perka Kondaram Village in Telangana, India. He is passionate about organic farming and has been a driving force behind our family's agricultural practices.\n\nHe learnt farming practices at a very young age working with Late Sri. S.Lingaiah. As the eldest son of Late Sri. S.Lingaiah, he has always been deeply connected to our land and its traditions.\n\nA very proud moment for S.Saidulu, standing amidst our flourishing mango trees, which he has nurtured with love and care.\n\nDiscovering new techniques and methods to enhance our farming practices is a continuous journey for him. He is always eager to learn and adapt.\n\nHis ambition to cultivate organic farming practices that respect the environment and promote biodiversity is unwavering.\n\nHis commitment to organic farming continues to inspire us every day."
+    "content": "S. Saidulu is a retired Excise Superintendent with the TSED (Telangana State Excise Department). Originally from Perka Kondaram village in Telangana, India, he is passionate about organic farming and has been a driving force behind our family's agricultural practices.\n\nHe learned farming practices at a very young age while working with the late Sri. S. Lingaiah. As the eldest son of the late Sri. S. Lingaiah, he has always been deeply connected to our land and its traditions.\n\nThis is a proud moment for S. Saidulu, standing amidst our flourishing mango trees, which he has nurtured with love and care.\n\nDiscovering new techniques and methods to enhance our farming practices is a continuous journey for him. He is always eager to learn and adapt.\n\nHis ambition to cultivate organic farming practices that respect the environment and promote biodiversity is unwavering.\n\nHis commitment to organic farming continues to inspire us every day."
   },
   {
     "id": 3,
@@ -71,7 +71,7 @@ const blogArticles: BlogArticle[] = [
     "date": "2021-04-04",
     image: dadInFrontOfRedChilliCrop,
     alt: 'Dad in front of red chilli crop',
-    "content": "My dad proudly showcasing our vibrant red chilli crop a fiery symbol of the hard work, care, and commitment he pours into every harvest. His dedication to organic farming shines through in the rich color, flavor, and quality of our produce."
+    "content": "My dad proudly showcases our vibrant red chilli crop, a fiery symbol of the hard work, care, and commitment he pours into every harvest. His dedication to organic farming shines through in the rich color, flavor, and quality of our produce."
   },
   {
     "id": 6,
@@ -79,7 +79,7 @@ const blogArticles: BlogArticle[] = [
     "date": "2021-01-06",
     image: grandFatherInFrontOfMangoTrees,
     alt: 'Grandfather in front of mango trees',
-    "content": "My grandfather, a pillar of strength and wisdom, standing tall in front of our mango trees. His dedication to organic farming has inspired us all to embrace sustainable practices."
+    "content": "My grandfather, a pillar of strength and wisdom, stands tall in front of our mango trees. His dedication to organic farming has inspired us all to embrace sustainable practices."
   },
   {
     "id": 7,
@@ -87,11 +87,11 @@ const blogArticles: BlogArticle[] = [
     "date": "2021-07-11",
     image: dadInFrontOfWaterWell,
     alt: 'Dad in front of water well',
-    "content": "My dad by the water well a vital lifeline for our farm. His dedication ensures we uphold sustainable practices while carefully nurturing every crop we grow."
+    "content": "My dad stands by the water well, a vital lifeline for our farm. His dedication ensures we uphold sustainable practices while carefully nurturing every crop we grow."
   },
   {
     "id": 8,
-    "title": "Rooted in Legacy: Honoring My Grandfather’s Journey in Organic Farming with Groundnuts harvest",
+    "title": "Rooted in Legacy: Honoring My Grandfather’s Journey in Organic Farming with a Groundnut Harvest",
     "date": "2022-04-09",
     images: [
       grandFatherWithGroundNutsOne,
@@ -130,7 +130,7 @@ const blogArticles: BlogArticle[] = [
       agricultureScientistEight
     ],
     alt: 'Dr. Ch. Raghu visiting Sri Krushi Organic Farming',
-    "content": "Renowned agricultural scientist Dr. Ch. Raghu son of Ch. Pichaiah is based in Germany. He is our guest at Sri Krushi Organic Farming and appreciated our farm’s dedication to follow sustainable and organic farming methods. During his visit, he observed the soil health initiatives and eco-friendly cultivation methods implemented by the team. He commended the farm’s efforts in promoting chemical-free agriculture and preserving traditional farming knowledge of Telangana, India.\n\nDr. Raghu’s feedback highlighted the farm’s role in following environmental health, farmer well-being and food safety. This visit not only strengthened our commitment to organic practices but also inspired us to continue our journey towards sustainable agriculture.\n\nWe are grateful for his visit and support, which motivates us to keep pushing the boundaries of organic farming."
+    "content": "Renowned agricultural scientist Dr. Ch. Raghu, son of Ch. Pichaiah, is based in Germany. During his visit to Sri Krushi Organic Farming, he praised our farm’s dedication to sustainable and organic farming methods. He observed the team’s soil-health initiatives and eco-friendly cultivation methods, and commended the farm’s efforts to promote chemical-free agriculture and preserve Telangana’s traditional farming knowledge.\n\nDr. Raghu’s feedback highlighted the farm’s role in supporting environmental health, farmer well-being, and food safety. This visit not only strengthened our commitment to organic practices but also inspired us to continue our journey towards sustainable agriculture.\n\nWe are grateful for his visit and support, which motivate us to keep pushing the boundaries of organic farming."
   }
 ];
 

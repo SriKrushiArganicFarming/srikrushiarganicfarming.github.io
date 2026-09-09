@@ -10,9 +10,9 @@ describe('Blog', () => {
     expect(screen.getAllByRole('article').map((article) => within(article).getByRole('heading', { level: 3 }).textContent)).toEqual([
       'Renowned Agriculture Scientist Dr. Ch. Raghu Visits Sri Krushi Organic Farming, Applauds Sustainable Efforts',
       "Among the Mango Trees: A Tribute to My Father's Passion for Organic Farming",
-      'Rooted in Legacy: Honoring My Grandfather’s Journey in Organic Farming with Groundnuts harvest',
+      'Rooted in Legacy: Honoring My Grandfather’s Journey in Organic Farming with a Groundnut Harvest',
       'At the Well: Sustaining Our Farm, One Drop at a Time',
-      'From Telangana State Excise Department Excise Superintendent to Organic Farming Advocate: The Story of S. Saidulu',
+      'From Excise Superintendent to Organic Farming Advocate: The Story of S. Saidulu',
       "Fields of Fire: A Tribute to My Father's Labor in the Red Chilli Crop",
       'Love and Growth: Cherishing Moments with Grandmother Ch. Achamma on the Farm',
       'A Legacy of Strength and Sustainability: My Grandfather Ch. Pichaiah in Front of Our Mango Trees',

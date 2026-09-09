@@ -188,7 +188,7 @@ function App() {
         <footer className="footer">
           <div className="footer-content">
             <div className="footer-title">
-              &copy; {new Date().getFullYear()} SRI KRUSHI ORGANIC FARMING
+              &copy; 2005 - {new Date().getFullYear()} SRI KRUSHI ORGANIC FARMING
             </div>
             <div className="footer-links">
               <Link to="/privacy-policy">Privacy Policy</Link>
