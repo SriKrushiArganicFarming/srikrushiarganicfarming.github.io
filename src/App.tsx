@@ -53,16 +53,14 @@ function Products() {
     <>
       <img src={logo} alt="Sri Krushi Organic Farming Logo" className="logo" />
       <h1>Sri Krushi Organic Farming</h1>
-      <p>
-        We are dedicated to sustainable agriculture and organic farming practices since 2005. We provide high-quality organic products and promote eco-friendly farming methods.
-      </p>
+      <p className="home-intro">Organic farming and natural products from Balemla, Suryapet district, since 2005.</p>
       <section>
-        <h2>Our Products</h2>
         <div className="trust-highlights" aria-label="Why choose Sri Krushi Organic Farming">
           <div><strong>Since 2005</strong><span>Trusted organic farming</span></div>
           <div><strong>Organic products</strong><span>Kind to soil and crops</span></div>
           <div><strong>Bulk orders</strong><span>Contact us for availability</span></div>
         </div>
+        <h2>Our Products</h2>
         <div className="products">
           {PRODUCTS.map((product) => (
             <Link

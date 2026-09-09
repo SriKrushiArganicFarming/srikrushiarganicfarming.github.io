@@ -297,6 +297,10 @@ h2 {
     margin: 0 auto 1.25rem;
 }
 
+.trust-highlights + h2 {
+    margin-top: 1.5rem;
+}
+
 .trust-highlights div {
     background: #eaf5ee;
     border: 1px solid #cae6d3;
@@ -457,6 +461,12 @@ h2 {
     align-items: center;
     margin-bottom: 1.5rem;
     flex-wrap: wrap;
+}
+
+.home-intro {
+    margin: 0 auto 1.5rem;
+    max-width: 44rem;
+    text-align: center;
 }
 
 .nav a {
@@ -759,6 +769,16 @@ h2 {
 
 
 @media (min-width: 600px) {
+    .nav {
+        column-gap: 0.35rem;
+        flex-wrap: nowrap;
+    }
+
+    .nav a {
+        padding-left: 0.45rem;
+        padding-right: 0.45rem;
+    }
+
     .order-form {
         margin-left: auto;
         margin-right: auto;

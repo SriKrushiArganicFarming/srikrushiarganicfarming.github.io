@@ -43,7 +43,7 @@ describe('App Component', () => {
     renderApp();
     const year = new Date().getFullYear();
     expect(
-      screen.getByText(new RegExp(`© ${year} SRI KRUSHI ORGANIC FARMING`, 'i'))
+      screen.getByText(new RegExp(`© (?:2005 - )?${year} SRI KRUSHI ORGANIC FARMING`, 'i'))
     ).toBeInTheDocument();
   });
 });
