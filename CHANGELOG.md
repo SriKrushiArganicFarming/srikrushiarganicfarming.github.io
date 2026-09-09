@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.8.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.7.0...v1.8.0) (2026-09-09)
+
+
+### Features
+
+* enhance blog and news pages with article indexing and smooth scrolling ([fbc5fd1](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/fbc5fd1443a5157e07dd073624a468fe373a065d))
+* update product description and improve layout with new styling for headings and navigation ([325e8b5](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/325e8b5d035e22a55fa8cef324f9c723f7d9f5f3))
+
+
+### Bug Fixes
+
+* update footer copyright year and improve article titles and content for clarity ([1d1b1e7](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/1d1b1e7a11dc39a5ad34efbe38d683116b40aaf1))
+
 ## [1.7.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.6.0...v1.7.0) (2026-09-09)
 
 
