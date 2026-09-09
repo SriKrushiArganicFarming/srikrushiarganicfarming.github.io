@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.3.0...v1.4.0) (2026-09-09)
+
+
+### Features
+
+* enhance article sorting UI with styled buttons in Blog and News components ([470e168](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/470e16835c8c5454f35cb36089010b3e948174bd))
+
 ## [1.3.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.2.0...v1.3.0) (2026-09-09)
 
 
