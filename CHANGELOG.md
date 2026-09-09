@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.7.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.6.0...v1.7.0) (2026-09-09)
+
+
+### Features
+
+* update navigation to use a link for the site logo and enhance logo styling ([150b4f8](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/150b4f8afce50396238c507cbd718287708bd756))
+
+
+### Bug Fixes
+
+* remove max-height and object-fit properties from h2 styling ([f047989](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/commit/f047989ddcc0ee20b1768e5de138bb5838400637))
+
 ## [1.6.0](https://github.com/SriKrushiOrganicFarming/srikrushiorganicfarming.github.io/compare/v1.5.0...v1.6.0) (2026-09-09)
 
 
