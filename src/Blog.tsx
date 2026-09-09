@@ -22,10 +22,21 @@ import agricultureScientistSix from './assets/blog/WhatsApp Image 2025-07-02-6.j
 import agricultureScientistSeven from './assets/blog/WhatsApp Image 2025-07-02-7.jpeg'
 import agricultureScientistEight from './assets/blog/WhatsApp Image 2025-07-02-8.jpeg'
 
-const blogArticles = [
+type BlogArticle = {
+  id: number;
+  title: string;
+  date: string;
+  image?: string;
+  images?: string[];
+  alt: string;
+  content: string;
+};
+
+const blogArticles: BlogArticle[] = [
   {
     "id": 1,
     "title": "Journey from TSRTC Union Leader to Organic Farming Pioneer: Ch. Pichaiah’s Story",
+    "date": "2018-09-15",
     image: grandFatherWalking,
     alt: 'Grandfather walking',
     "content": "Ch. Pichaiah is a retired former secretary of the RTC Employees Union and TSRTC (Telangana State Road Transport Corporation) employee. Originally from Agraharam village in Telangana, India. He dedicated over 30 years as a bus driver before returning to his agricultural roots.\n\nWith over 40 years of experience in organic farming, Pichaiah is the founder of Sri Krushi Organic Farming. His passion for sustainable agriculture and deep knowledge of organic practices have been key to the venture’s success.\n\nHe is actively involved in all aspects of the business from managing orders and delivering products to addressing customer queries. Committed to quality and community.\n\nHe is also focused on promoting organic farming and educating young farmers and consumers about its long-term benefits."
@@ -33,6 +44,7 @@ const blogArticles = [
   {
     "id": 2,
     "title": "From Telangana State Excise Department Excise Superintendent to Organic Farming Advocate: The Story of S. Saidulu",
+    "date": "2021-04-09",
     image: dadInFrontOfMangoTreesOne,
     alt: 'Dad in front of mango trees',
     "content": "S.Saidulu is a retired Excise Superintendent of the TSED (Telangana State Excise Department). Originally from Perka Kondaram Village in Telangana, India. He is passionate about organic farming and has been a driving force behind our family's agricultural practices.\n\nHe learnt farming practices at a very young age working with Late Sri. S.Lingaiah. As the eldest son of Late Sri. S.Lingaiah, he has always been deeply connected to our land and its traditions.\n\nA very proud moment for S.Saidulu, standing amidst our flourishing mango trees, which he has nurtured with love and care.\n\nDiscovering new techniques and methods to enhance our farming practices is a continuous journey for him. He is always eager to learn and adapt.\n\nHis ambition to cultivate organic farming practices that respect the environment and promote biodiversity is unwavering.\n\nHis commitment to organic farming continues to inspire us every day."
@@ -40,6 +52,7 @@ const blogArticles = [
   {
     "id": 3,
     "title": "Passionate Organic Farming Duo",
+    "date": "2021-01-06",
     "image": dadAndGrandFatherInFrontOfMangoTrees,
     "alt": "Dad and Grandfather in front of mango trees",
     "content": "A cherished moment featuring my father, S. Saidulu, and grandfather, Ch. Pichaiah, standing proudly before our thriving mango trees.\n\nThis image beautifully reflects our family's enduring bond with the land and the tradition of organic farming passed down through generations."
@@ -47,6 +60,7 @@ const blogArticles = [
   {
     "id": 4,
     "title": "Love and Growth: Cherishing Moments with Grandmother Ch. Achamma on the Farm",
+    "date": "2021-01-30",
     image: grandMotherInFrontOfMangoTrees,
     alt: 'Grandmother in front of mango trees',
     "content": "A beautiful moment with my grandmother Ch. Achamma, who has always been a source of love and support. Her presence in our farm reminds us of the importance of nurturing both plants and family."
@@ -54,6 +68,7 @@ const blogArticles = [
   {
     "id": 5,
     "title": "Fields of Fire: A Tribute to My Father's Labor in the Red Chilli Crop",
+    "date": "2021-04-04",
     image: dadInFrontOfRedChilliCrop,
     alt: 'Dad in front of red chilli crop',
     "content": "My dad proudly showcasing our vibrant red chilli crop a fiery symbol of the hard work, care, and commitment he pours into every harvest. His dedication to organic farming shines through in the rich color, flavor, and quality of our produce."
@@ -61,6 +76,7 @@ const blogArticles = [
   {
     "id": 6,
     "title": "A Legacy of Strength and Sustainability: My Grandfather Ch. Pichaiah in Front of Our Mango Trees",
+    "date": "2021-01-06",
     image: grandFatherInFrontOfMangoTrees,
     alt: 'Grandfather in front of mango trees',
     "content": "My grandfather, a pillar of strength and wisdom, standing tall in front of our mango trees. His dedication to organic farming has inspired us all to embrace sustainable practices."
@@ -68,6 +84,7 @@ const blogArticles = [
   {
     "id": 7,
     "title": "At the Well: Sustaining Our Farm, One Drop at a Time",
+    "date": "2021-07-11",
     image: dadInFrontOfWaterWell,
     alt: 'Dad in front of water well',
     "content": "My dad by the water well a vital lifeline for our farm. His dedication ensures we uphold sustainable practices while carefully nurturing every crop we grow."
@@ -75,6 +92,7 @@ const blogArticles = [
   {
     "id": 8,
     "title": "Rooted in Legacy: Honoring My Grandfather’s Journey in Organic Farming with Groundnuts harvest",
+    "date": "2022-04-09",
     images: [
       grandFatherWithGroundNutsOne,
       grandFatherWithGroundNutsTwo,
@@ -89,6 +107,7 @@ const blogArticles = [
   {
     "id": 9,
     "title": "Among the Mango Trees: A Tribute to My Father's Passion for Organic Farming",
+    "date": "2022-05-15",
     images: [
       dadInFrontOfMangoTreesTwo,
       dadInFrontOfMangoTreesThree
@@ -99,6 +118,7 @@ const blogArticles = [
   {
     "id": 10,
     "title": "Renowned Agriculture Scientist Dr. Ch. Raghu Visits Sri Krushi Organic Farming, Applauds Sustainable Efforts",
+    "date": "2025-07-02",
     images: [
       agricultureScientistOne,
       agricultureScientistTwo,
@@ -109,12 +129,16 @@ const blogArticles = [
       agricultureScientistSeven,
       agricultureScientistEight
     ],
-    alt: '',
+    alt: 'Dr. Ch. Raghu visiting Sri Krushi Organic Farming',
     "content": "Renowned agricultural scientist Dr. Ch. Raghu son of Ch. Pichaiah is based in Germany. He is our guest at Sri Krushi Organic Farming and appreciated our farm’s dedication to follow sustainable and organic farming methods. During his visit, he observed the soil health initiatives and eco-friendly cultivation methods implemented by the team. He commended the farm’s efforts in promoting chemical-free agriculture and preserving traditional farming knowledge of Telangana, India.\n\nDr. Raghu’s feedback highlighted the farm’s role in following environmental health, farmer well-being and food safety. This visit not only strengthened our commitment to organic practices but also inspired us to continue our journey towards sustainable agriculture.\n\nWe are grateful for his visit and support, which motivates us to keep pushing the boundaries of organic farming."
   }
 ];
 
 export default function Blog() {
+  const chronologicalArticles = [...blogArticles].sort(
+    (a, b) => a.date.localeCompare(b.date) || a.id - b.id
+  );
+
   return (
     <div>
       <h2>Blog</h2>
@@ -122,18 +146,23 @@ export default function Blog() {
         Stay tuned for articles and updates on organic farming, and more!
       </p>
       <div>
-        {blogArticles
-          .sort((a, b) => b.id - a.id) // Sort in descending order by id
-          .map((article) => (
+        {chronologicalArticles.map((article) => (
             <div key={article.id} style={{ marginBottom: '20px' }}>
               <h3>{article.title}</h3>
+              <time dateTime={article.date}>
+                {new Intl.DateTimeFormat('en-IN', {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+                }).format(new Date(`${article.date}T00:00:00`))}
+              </time>
               {article.images ? (
                 <div className="news-image-gallery">
                   {article.images.map((image, index) => (
                     <img
                       key={index}
                       src={image}
-                      alt={article.alt}
+                      alt={`${article.alt} (${index + 1} of ${article.images!.length})`}
                       style={{ width: '100%', height: 'auto' }}
                     />
                   ))}
