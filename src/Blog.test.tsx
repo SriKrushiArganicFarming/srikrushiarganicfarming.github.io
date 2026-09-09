@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import { describe, expect, test } from 'vitest';
 
 import Blog from './Blog';
@@ -7,7 +7,7 @@ describe('Blog', () => {
   test('shows the newest articles first', () => {
     render(<Blog />);
 
-    expect(screen.getAllByRole('heading', { level: 3 }).map((heading) => heading.textContent)).toEqual([
+    expect(screen.getAllByRole('article').map((article) => within(article).getByRole('heading', { level: 3 }).textContent)).toEqual([
       'Renowned Agriculture Scientist Dr. Ch. Raghu Visits Sri Krushi Organic Farming, Applauds Sustainable Efforts',
       "Among the Mango Trees: A Tribute to My Father's Passion for Organic Farming",
       'Rooted in Legacy: Honoring My Grandfather’s Journey in Organic Farming with Groundnuts harvest',
@@ -26,7 +26,7 @@ describe('Blog', () => {
 
     fireEvent.click(screen.getByRole('button', { name: /sort: newest first/i }));
 
-    expect(screen.getAllByRole('heading', { level: 3 })[0].textContent).toBe(
+    expect(within(screen.getAllByRole('article')[0]).getByRole('heading', { level: 3 }).textContent).toBe(
       'Journey from TSRTC Union Leader to Organic Farming Pioneer: Ch. Pichaiah’s Story'
     );
   });

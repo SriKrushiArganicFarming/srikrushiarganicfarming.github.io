@@ -144,7 +144,7 @@ export default function Blog() {
   );
 
   return (
-    <div>
+    <div className="article-page">
       <h2>Blog</h2>
       <p>
         Stay tuned for articles and updates on organic farming, and more!
@@ -160,9 +160,10 @@ export default function Blog() {
           Sort: {newestFirst ? 'Newest first' : 'Oldest first'}
         </button>
       </div>
-      <div className="article-list">
-        {sortedArticles.map((article) => (
-            <article key={article.id} className="article-card">
+      <div className="article-page-layout">
+        <div className="article-list">
+          {sortedArticles.map((article) => (
+            <article key={article.id} id={`blog-article-${article.id}`} className="article-card">
               <h3>{article.title}</h3>
               <time className="article-date" dateTime={article.date}>
                 {new Intl.DateTimeFormat('en-IN', {
@@ -192,6 +193,17 @@ export default function Blog() {
               <p style={{ whiteSpace: 'pre-line' }}>{article.content}</p>
             </article>
           ))}
+        </div>
+        <nav className="article-index" aria-label="Blog articles">
+          <h3>Blog articles</h3>
+          <ol>
+            {sortedArticles.map((article) => (
+              <li key={article.id}>
+                <a href={`#blog-article-${article.id}`}>{article.title}</a>
+              </li>
+            ))}
+          </ol>
+        </nav>
       </div>
 
     </div>

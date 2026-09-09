@@ -50,7 +50,7 @@ export default function News() {
   );
 
   return (
-    <div>
+    <div className="article-page">
       <h2>News</h2>
       <p>
         Latest news and announcements from Sri Krushi Organic Farming.
@@ -66,9 +66,10 @@ export default function News() {
           Sort: {newestFirst ? 'Newest first' : 'Oldest first'}
         </button>
       </div>
-      <div className="article-list">
-        {sortedArticles.map((article) => (
-          <article key={article.id} className="article-card">
+      <div className="article-page-layout">
+        <div className="article-list">
+          {sortedArticles.map((article) => (
+          <article key={article.id} id={`news-article-${article.id}`} className="article-card">
             <h3>{article.title}</h3>
             <time className="article-date" dateTime={article.date}>
               {new Intl.DateTimeFormat('en-IN', {
@@ -93,7 +94,18 @@ export default function News() {
             )}
             <p style={{ whiteSpace: 'pre-line' }}>{article.content}</p>
           </article>
-        ))}
+          ))}
+        </div>
+        <nav className="article-index" aria-label="News articles">
+          <h3>News articles</h3>
+          <ol>
+            {sortedArticles.map((article) => (
+              <li key={article.id}>
+                <a href={`#news-article-${article.id}`}>{article.title}</a>
+              </li>
+            ))}
+          </ol>
+        </nav>
       </div>
     </div>
   );
